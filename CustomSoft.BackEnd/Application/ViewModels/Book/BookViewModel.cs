@@ -12,9 +12,9 @@ namespace Application.ViewModels.Book
         public required string Title { get; set; }
         public string? FileDirection { get; set; }
         public string? PublicationDate { get; set; }
-        public string? BookAuthorGuid { get; set; }
-        public string? Name { get; set; }
-        public string? LastName { get; set; }
+        public string BookAuthorGuid { get; set; }
+        public string AuthorName { get; set; }
+        public string AuthorLastName { get; set; }
         public string? Birthdate { get; set; } 
     }
 }

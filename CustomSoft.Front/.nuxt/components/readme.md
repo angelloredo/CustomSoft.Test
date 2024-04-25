@@ -9,3 +9,6 @@ You can directly use them in pages and other components without the need to impo
 - `<NuxtLogo>` | `<nuxt-logo>` (components/NuxtLogo.vue)
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<VuetifyLogo>` | `<vuetify-logo>` (components/VuetifyLogo.vue)
+- `<BookComponentsAddEditFormComponent>` | `<book-components-add-edit-form-component>` (components/BookComponents/add-edit-form-component.vue)
+- `<BookListComponent>` | `<book-list-component>` (components/BookComponents/book-list-component.vue)
+- `<BookComponentsDetailsComponent>` | `<book-components-details-component>` (components/BookComponents/details-component.vue)

@@ -3,6 +3,7 @@ using Application.Services.Book;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
+using Newtonsoft.Json;
 using Serilog;
 using System;
 
@@ -90,7 +91,7 @@ namespace CustomSoft.BackEnd.Controllers
             try
             {
                 var books = await _bookService.GetBookListAsync();
-                return Ok(books);
+                return Ok(JsonConvert.SerializeObject(books));
             }
             catch (Exception ex)
             {

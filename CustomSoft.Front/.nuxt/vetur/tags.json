@@ -7,5 +7,14 @@
   },
   "VuetifyLogo": {
     "description": "Auto imported from components/VuetifyLogo.vue"
+  },
+  "BookComponentsAddEditFormComponent": {
+    "description": "Auto imported from components/BookComponents/add-edit-form-component.vue"
+  },
+  "BookListComponent": {
+    "description": "Auto imported from components/BookComponents/book-list-component.vue"
+  },
+  "BookComponentsDetailsComponent": {
+    "description": "Auto imported from components/BookComponents/details-component.vue"
   }
 }

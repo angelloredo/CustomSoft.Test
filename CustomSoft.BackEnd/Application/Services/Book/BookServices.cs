@@ -83,8 +83,9 @@ namespace Application.Services.Book
                     BookId = bookId,
                     Title = dto.Title,
                     BookAuthorGuid = dto.BookAuthorGuid,
-                    Name = dto.AuthorName,
-                    LastName = dto.AuthorLastName
+                    AuthorName = dto.AuthorName,
+                    AuthorLastName = dto.AuthorLastName,
+                    PublicationDate = dto.PublicationDate.Value.ToShortDateString()
                 };
             }
             catch (Exception)
@@ -106,8 +107,9 @@ namespace Application.Services.Book
                     BookId = dto.BookId,
                     Title = dto.Title,
                     BookAuthorGuid = dto.BookAuthorGuid,
-                    Name = dto.AuthorName,
-                    LastName = dto.AuthorLastName
+                    AuthorName = dto.AuthorName,
+                    AuthorLastName = dto.AuthorLastName,
+                    PublicationDate = dto.PublicationDate.Value.ToShortDateString()
                 }).ToList();
             }
             catch (Exception)

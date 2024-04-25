@@ -49,6 +49,17 @@ builder.Services.Configure<FormOptions>(options =>
 //    .AddDbContext<MyDbContext>(options => options.UseNpgsql("Host=myhost;Username=myuser;Password=mypassword;Database=mydatabase"))
 //    .BuildServiceProvider();
 
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
 
 
 
@@ -78,6 +89,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseAuthorization();
+app.UseCors("AllowAll");
 
 app.MapControllers();
 
@@ -119,14 +131,25 @@ static class CustomExtensionsMethods
     {
         // Add framework services.
         services.AddControllers();
+        //services.AddCors(options =>
+        //{
+        //    options.AddPolicy("CorsPolicy",
+        //        builder => builder
+        //        .SetIsOriginAllowed((host) => true)
+        //        .AllowAnyMethod()
+        //        .AllowAnyHeader()
+        //        .AllowCredentials());
+        //});
+
         services.AddCors(options =>
         {
-            options.AddPolicy("CorsPolicy",
-                builder => builder
-                .SetIsOriginAllowed((host) => true)
-                .AllowAnyMethod()
-                .AllowAnyHeader()
-                .AllowCredentials());
+            options.AddPolicy("AllowAll",
+                builder =>
+                {
+                    builder.AllowAnyOrigin()
+                           .AllowAnyMethod()
+                           .AllowAnyHeader();
+                });
         });
 
 
