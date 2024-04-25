@@ -73,6 +73,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 
+builder.Services.AddHttpContextAccessor();
+//builder.Services.AddTransient<ApiKeyMiddleware>();
+
 builder.Services
     .AddCustomMvc()
     .AddCustomDbContext(builder.Configuration)
@@ -88,9 +91,11 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-app.UseAuthorization();
-app.UseCors("AllowAll");
 
+app.UseAuthorization();
+//app.UseMiddleware<ApiKeyMiddleware>();
+
+app.UseCors("AllowAllOrigins");
 app.MapControllers();
 
 try
@@ -124,31 +129,54 @@ public partial class Program
     public static string AppName = Namespace.Substring(Namespace.LastIndexOf('.', Namespace.LastIndexOf('.') - 1) + 1);
 }
 
+public class ApiKeyMiddleware
+{
+    private readonly RequestDelegate _next;
+    private readonly string _apiKey;
+
+    public ApiKeyMiddleware(RequestDelegate next, string apiKey)
+    {
+        _next = next;
+        _apiKey = apiKey;
+    }
+
+    public async Task InvokeAsync(HttpContext context)
+    {
+        if (context.Request.Headers.TryGetValue("X-Api-Key", out var apiKeyValues))
+        {
+            var providedApiKey = apiKeyValues.FirstOrDefault();
+            if (providedApiKey == _apiKey)
+            {
+                await _next(context);
+                return;
+            }
+        }
+
+        context.Response.StatusCode = 401;
+        await context.Response.WriteAsync("Unauthorized");
+    }
+}
 
 static class CustomExtensionsMethods
 {
+
+
+
     public static IServiceCollection AddCustomMvc(this IServiceCollection services)
     {
         // Add framework services.
         services.AddControllers();
-        //services.AddCors(options =>
-        //{
-        //    options.AddPolicy("CorsPolicy",
-        //        builder => builder
-        //        .SetIsOriginAllowed((host) => true)
-        //        .AllowAnyMethod()
-        //        .AllowAnyHeader()
-        //        .AllowCredentials());
-        //});
+  
 
         services.AddCors(options =>
         {
-            options.AddPolicy("AllowAll",
+            options.AddPolicy("AllowAllOrigins",
                 builder =>
                 {
                     builder.AllowAnyOrigin()
                            .AllowAnyMethod()
-                           .AllowAnyHeader();
+                           .AllowAnyHeader()
+                           .WithExposedHeaders("X-Api-Key"); 
                 });
         });
 
@@ -181,7 +209,7 @@ static class CustomExtensionsMethods
         {
             options.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "CustomSoft - BookMarket - Jose Angel Loredo Hernandez",
+                Title = "CustomSoft - BookMarket - José Angel Loredo Hernandez",
                 Version = "v1",
                 Description = "HTTP API."
             });
@@ -200,6 +228,9 @@ static class CustomExtensionsMethods
             //});
             //options.OperationFilter<AuthorizeCheckOperationFilter>();
         });
+
+    
+
         return services;
     }
 

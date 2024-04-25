@@ -14,12 +14,14 @@ namespace CustomSoft.BackEnd.Controllers
     public class BookController : ControllerBase
     {
         private readonly ILogger<BookController> _logger;
-        private readonly IBookServices _bookService;
+        private readonly IBookServices _bookService; 
+        private readonly IHttpContextAccessor _httpContextAccessor;
 
-        public BookController(ILogger<BookController> logger, IBookServices bookService)
+        public BookController(ILogger<BookController> logger, IBookServices bookService, IHttpContextAccessor httpContextAccessor)
         {
             _logger = logger;
             _bookService = bookService;
+            _httpContextAccessor = httpContextAccessor;
         }
 
         [HttpPost]
@@ -90,6 +92,13 @@ namespace CustomSoft.BackEnd.Controllers
         {
             try
             {
+                var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
+
+                if (apiKey != "my-secret-api-key")
+                {
+                    return Unauthorized();
+                }
+
                 var books = await _bookService.GetBookListAsync();
                 return Ok(JsonConvert.SerializeObject(books));
             }

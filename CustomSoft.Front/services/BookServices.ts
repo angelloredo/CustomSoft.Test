@@ -1,14 +1,14 @@
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
 import { Book } from '~/viewModel/BookViewModel';
 import * as XLSX from 'xlsx';
 const baseURL = 'http://localhost:33755/api/book'
 
-const headers: Readonly<Record<string, string | boolean>> = {
-    Accept: "application/json",
-    "Content-Type": "application/json; charset=utf-8",
-    "Access-Control-Allow-Credentials": true,
-    "X-Requested-With": "XMLHttpRequest"
-};
+    
+// Agregar el token Bearer a las cabeceras
+const headers = {
+    Authorization: 'Bearer your-token-here'
+}
+
 
 // Define la interfaz para el comando de creación de libros
 interface CreateBookCommand {
@@ -74,7 +74,7 @@ const bookService: BookService = {
     async getBookList(): Promise<any> {
         try {
 
-            const response: any = await axios.get<any>(baseURL);
+            const response: any = await axios.get<any>(baseURL, { headers: { 'X-Api-Key': 'my-secret-api-key' } });
             return response.data;
         } catch (error) {
             handleError(error);
@@ -118,7 +118,7 @@ const bookService: BookService = {
     exportToExcel(data, fileName, title, sheetName = 'Libros') {
         const worksheet = XLSX.utils.json_to_sheet(data);
 
-    
+
 
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);

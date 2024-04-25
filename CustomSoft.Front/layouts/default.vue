@@ -75,7 +75,7 @@ export default {
       miniVariant: false,
       right: true,
       rightDrawer: false,
-      title: 'CustomSoft - BookMarket - Jose Ángel Loredo Hernández'
+      title: 'CustomSoft - BookMarket - José Ángel Loredo Hernández'
     }
   }
 }
