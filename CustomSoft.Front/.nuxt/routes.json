@@ -1,0 +1,16 @@
+[
+  {
+    "name": "inspire",
+    "path": "/inspire",
+    "component": "C:\\\\Users\\\\PC41\\\\source\\\\repos\\\\angelloredo\\\\CustomSoft\\\\CustomSoft.Front\\\\pages\\\\inspire.vue",
+    "chunkName": "pages/inspire",
+    "_name": "_33484b66"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "C:\\\\Users\\\\PC41\\\\source\\\\repos\\\\angelloredo\\\\CustomSoft\\\\CustomSoft.Front\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_412f725e"
+  }
+]
