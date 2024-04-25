@@ -1,0 +1,6 @@
+@CustomSoft.BackEnd_HostAddress = http://localhost:5288
+
+GET {{CustomSoft.BackEnd_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
