@@ -16,12 +16,14 @@ namespace CustomSoft.BackEnd.Controllers
         private readonly ILogger<BookController> _logger;
         private readonly IBookServices _bookService; 
         private readonly IHttpContextAccessor _httpContextAccessor;
+        private readonly IConfiguration _configuration;
 
-        public BookController(ILogger<BookController> logger, IBookServices bookService, IHttpContextAccessor httpContextAccessor)
+        public BookController(ILogger<BookController> logger, IBookServices bookService, IHttpContextAccessor httpContextAccessor , IConfiguration configuration)
         {
             _logger = logger;
             _bookService = bookService;
             _httpContextAccessor = httpContextAccessor;
+            _configuration = configuration;
         }
 
         [HttpPost]
@@ -93,8 +95,8 @@ namespace CustomSoft.BackEnd.Controllers
             try
             {
                 var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
-
-                if (apiKey != "my-secret-api-key")
+                var apiKeySecret = _configuration["ApiKey"];
+                if (apiKey != apiKeySecret)
                 {
                     return Unauthorized();
                 }
@@ -120,41 +122,16 @@ namespace CustomSoft.BackEnd.Controllers
                 if (file == null || file.Length == 0)
                     return BadRequest("No se ha proporcionado ningún archivo o el archivo está vacío.");
 
-                // Obtener información sobre el archivo
-                var fileExtension = Path.GetExtension(file.FileName);
-                var fileName = $"{bookId}{fileExtension}";
-                var fileSize = file.Length;
+                var result = await _bookService.UploadFile(bookId, file);
 
-                // Guardar el archivo en el servidor (aquí puedes almacenarlo en la ubicación que desees)
-                // Por ejemplo, puedes guardarlos en la carpeta "uploads" en la raíz del proyecto
-                var filePath = Path.Combine("uploads", fileName);
-                //var filePath = $".../../files/{fileName}" + fileExtension;
+                if (result.ErrorMsj != null && result.ErrorMsj.Length > 0)
+                    _logger.LogError($"Ocurrió un error al cargar el archivo: {result.ErrorMsj}");
 
-                if (!Directory.Exists(filePath))
-                {
-                    Directory.CreateDirectory(filePath);
-                }
-
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
-
-                // Devolver información sobre el archivo cargado
-                var fileInfo = new
-                {
-                    ClientId = bookId,
-                    FileName = fileName,
-                    FileSize = fileSize,
-                    FileExtension = fileExtension,
-                    FilePath = filePath // Puedes devolver la ruta del archivo si lo deseas
-                };
-
-                return Ok(fileInfo);
+                return Ok(result);
             }
             catch (Exception ex)
             {
+                _logger.LogError($"Ocurrió un error al cargar el archivo: {ex.Message}");
                 return Ok($"Ocurrió un error al cargar el archivo: {ex.Message}");
             }
         }
@@ -162,22 +139,32 @@ namespace CustomSoft.BackEnd.Controllers
         [HttpGet("download/{fileName}")]
         public IActionResult DownloadFile(string fileName)
         {
-            // Ruta donde se encuentra el archivo (ajústala según tu estructura de archivos)
-            var filePath = Path.Combine("uploads", fileName);
-
-            if (!System.IO.File.Exists(filePath))
+            try
             {
-                return NotFound("El archivo solicitado no existe.");
+                // Ruta donde se encuentra el archivo (ajústala según tu estructura de archivos)
+                var filePath = Path.Combine("uploads", fileName);
+
+                if (!System.IO.File.Exists(filePath))
+                {
+                    _logger.LogError("Ocurrió un error al cargar el archivo: Archivo no encontrado");
+                    return NotFound("El archivo solicitado no existe.");
+                }
+
+                // Obtener el tipo MIME del archivo
+                var contentType = MimeTypes.GetMimeType(filePath);
+
+                // Leer el archivo en bytes
+                var fileBytes = System.IO.File.ReadAllBytes(filePath);
+
+                // Retornar el archivo como un FileStreamResult
+                return File(fileBytes, contentType, fileName);
             }
-
-            // Obtener el tipo MIME del archivo
-            var contentType = MimeTypes.GetMimeType(filePath);
-
-            // Leer el archivo en bytes
-            var fileBytes = System.IO.File.ReadAllBytes(filePath);
-
-            // Retornar el archivo como un FileStreamResult
-            return File(fileBytes, contentType, fileName);
+            catch (Exception ex)
+            {
+                _logger.LogError($"Ocurrió un error al cargar el archivo: {ex.Message}");
+                return BadRequest();
+            }
+          
         }
     }
 

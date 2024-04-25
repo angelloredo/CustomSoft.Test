@@ -1,6 +1,7 @@
 ﻿using Application.Commands.Book;
 using Application.ViewModels.Book;
 using Domain.DTO.Book;
+using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace Application.Services.Book
 
 
         Task<List<BookViewModel>> GetBookListAsync();
+        Task<BookViewModel> UploadFile(Guid bookId, IFormFile file);
 
     }
 }

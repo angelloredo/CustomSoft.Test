@@ -32,7 +32,7 @@ interface BookService {
     getBookList(): Promise<Book[]>;
     uploadFile(bookId: string, file: File): Promise<any>;
     downloadFile(fileName: string): Promise<void>;
-    exportToExcel(data: any, fileName, sheetName: string = 'Sheet1'): void;
+    exportToExcel(data: any, fileName: string, sheetName: string): void;
 }
 
 // Implementa la interfaz del servicio de libros
