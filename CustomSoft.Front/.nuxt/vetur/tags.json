@@ -11,6 +11,9 @@
   "BookComponentsAddEditFormComponent": {
     "description": "Auto imported from components/BookComponents/add-edit-form-component.vue"
   },
+  "BookDirectoryComponent": {
+    "description": "Auto imported from components/BookComponents/book-directory-component.vue"
+  },
   "BookListComponent": {
     "description": "Auto imported from components/BookComponents/book-list-component.vue"
   },

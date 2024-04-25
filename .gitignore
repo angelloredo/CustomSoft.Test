@@ -1,0 +1,42 @@
+/node_modules
+/build
+/.DS_Store
+
+# Ignorar archivos específicos o tipos de archivos
+/config.js
+*.log
+
+# Ignorar directorios específicos
+/logs/
+/dist/
+
+
+
+# Ignorar archivos generados automáticamente
+bin/
+obj/
+*.dll
+*.exe
+
+# Ignorar archivos de configuración local
+appsettings.Development.json
+appsettings.Production.json
+
+# Ignorar archivos de dependencias de NuGet
+*.nuget.props
+*.paket.*
+*.dotnetcli.*
+
+# Ignorar archivos de usuario y caché
+*.user
+*.suo
+*.cache
+*.vscode
+.vs/
+
+# Ignorar archivos de respaldo
+*~
+
+# Ignorar archivos de registro y errores
+*.log
+logs/

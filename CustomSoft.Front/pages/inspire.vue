@@ -1,25 +1,18 @@
 <template>
   <v-row>
     <v-col class="text-center">
-      <img
-        src="/v.png"
-        alt="Vuetify.js"
-        class="mb-5"
-      >
-      <blockquote class="blockquote">
-        &#8220;First, solve the problem. Then, write the code.&#8221;
-        <footer>
-          <small>
-            <em>&mdash;John Johnson</em>
-          </small>
-        </footer>
-      </blockquote>
+    
+    <BookDirectory></BookDirectory>
     </v-col>
   </v-row>
 </template>
 
 <script>
+import BookDirectory from '~/components/BookComponents/book-directory-component.vue' 
 export default {
-  name: 'InspirePage'
+  name: 'InspirePage',
+  components: {
+    BookDirectory
+  }
 }
 </script>

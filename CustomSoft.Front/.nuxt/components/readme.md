@@ -10,5 +10,6 @@ You can directly use them in pages and other components without the need to impo
 - `<Tutorial>` | `<tutorial>` (components/Tutorial.vue)
 - `<VuetifyLogo>` | `<vuetify-logo>` (components/VuetifyLogo.vue)
 - `<BookComponentsAddEditFormComponent>` | `<book-components-add-edit-form-component>` (components/BookComponents/add-edit-form-component.vue)
+- `<BookDirectoryComponent>` | `<book-directory-component>` (components/BookComponents/book-directory-component.vue)
 - `<BookListComponent>` | `<book-list-component>` (components/BookComponents/book-list-component.vue)
 - `<BookComponentsDetailsComponent>` | `<book-components-details-component>` (components/BookComponents/details-component.vue)

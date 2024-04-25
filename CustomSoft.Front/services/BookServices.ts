@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from 'axios';
-
+import { Book } from '~/viewModel/BookViewModel';
+import * as XLSX from 'xlsx';
 const baseURL = 'http://localhost:33755/api/book'
 
 const headers: Readonly<Record<string, string | boolean>> = {
@@ -7,38 +8,19 @@ const headers: Readonly<Record<string, string | boolean>> = {
     "Content-Type": "application/json; charset=utf-8",
     "Access-Control-Allow-Credentials": true,
     "X-Requested-With": "XMLHttpRequest"
-  };
-
-// Define la interfaz para los datos del libro
-interface Book {
-    // Define las propiedades de acuerdo a tu modelo de datos
-    BookId: string;
-    Title: string;
-    FileDirection?: string;
-    PublicationDate?: string;
-    BookAuthorGuid?: string;
-    AuthorName?: string;
-    AuthorLastName?: string;
-    AuthorBirthdate?: string;
-}
+};
 
 // Define la interfaz para el comando de creación de libros
 interface CreateBookCommand {
-    // Define las propiedades de acuerdo a tu modelo de datos
-    // Por ejemplo:
     Title: string;
     FileDirection?: string;
-    // Agrega más propiedades según sea necesario
 }
 
 // Define la interfaz para el comando de actualización de libros
 interface UpdateBookCommand {
-    // Define las propiedades de acuerdo a tu modelo de datos
-    // Por ejemplo:
     BookId: string;
     Title?: string;
     FileDirection?: string;
-    // Agrega más propiedades según sea necesario
 }
 
 // Define la interfaz para el servicio de libros
@@ -46,8 +28,11 @@ interface BookService {
     insertBook(createBookCommand: CreateBookCommand): Promise<void>;
     updateBook(bookId: string, updateBookCommand: UpdateBookCommand): Promise<void>;
     deleteBook(bookId: string): Promise<void>;
-    getBookById(bookId: string): Promise<Book>;
+    getBookById(bookId: string): Promise<any>;
     getBookList(): Promise<Book[]>;
+    uploadFile(bookId: string, file: File): Promise<any>;
+    downloadFile(fileName: string): Promise<void>;
+    exportToExcel(data: any, fileName, sheetName: string = 'Sheet1'): void;
 }
 
 // Implementa la interfaz del servicio de libros
@@ -62,7 +47,7 @@ const bookService: BookService = {
 
     async updateBook(bookId: string, updateBookCommand: UpdateBookCommand): Promise<void> {
         try {
-            await axios.put<void>(`${baseURL}/${bookId}`, updateBookCommand);
+            await axios.put<void>(`${baseURL}`, updateBookCommand);
         } catch (error) {
             handleError(error);
         }
@@ -70,15 +55,16 @@ const bookService: BookService = {
 
     async deleteBook(bookId: string): Promise<void> {
         try {
-            await axios.delete<void>(`${baseURL}${bookId}`);
+            await axios.delete<void>(`${baseURL}/${bookId}`);
         } catch (error) {
             handleError(error);
         }
     },
 
-    async getBookById(bookId: string): Promise<Book> {
+    async getBookById(bookId: string): Promise<any> {
+
         try {
-            const response: AxiosResponse<Book> = await axios.get<Book>(`${baseURL}/${bookId}`);
+            const response: any = await axios.get<Book>(`${baseURL}/${bookId}`);
             return response.data;
         } catch (error) {
             handleError(error);
@@ -87,13 +73,58 @@ const bookService: BookService = {
 
     async getBookList(): Promise<any> {
         try {
-            debugger
+
             const response: any = await axios.get<any>(baseURL);
             return response.data;
         } catch (error) {
             handleError(error);
         }
     },
+    async uploadFile(bookId: string, file: File): Promise<any> {
+        try {
+            debugger
+            const formData = new FormData();
+            formData.append('file', file);
+
+            const config = {
+                headers: {
+                    'content-type': 'multipart/form-data'
+                }
+            };
+
+            const response: any = await axios.post(`${baseURL}/upload/${bookId}`, formData, config);
+            return response.data;
+        } catch (error) {
+            handleError(error);
+        }
+    },
+    async downloadFile(fileName: string): Promise<void> {
+        try {
+            const response = await axios.get(`${baseURL}/download/${fileName}`, {
+                responseType: 'blob'
+            });
+
+            const url = window.URL.createObjectURL(new Blob([response.data]));
+            const link = document.createElement('a');
+            link.href = url;
+            link.setAttribute('download', fileName);
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        } catch (error) {
+            handleError(error);
+        }
+    },
+    exportToExcel(data, fileName, title, sheetName = 'Libros') {
+        const worksheet = XLSX.utils.json_to_sheet(data);
+
+    
+
+        const workbook = XLSX.utils.book_new();
+        XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+        XLSX.writeFile(workbook, fileName);
+    }
+
 };
 
 // Función para manejar errores de Axios

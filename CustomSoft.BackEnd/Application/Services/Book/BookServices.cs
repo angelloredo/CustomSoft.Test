@@ -44,7 +44,7 @@ namespace Application.Services.Book
             {
                 await _bookRepository.UpdateBookAsync(new Domain.Entities.Book.Book
                 {
-                    BookId = updateBookCommand.id,
+                    BookId = updateBookCommand.bookId,
                     Title = updateBookCommand.title,
                     BookAuthorGuid = updateBookCommand.bookAuthorGuid,
                     PublicationDate = updateBookCommand.publicationDate
@@ -83,10 +83,10 @@ namespace Application.Services.Book
                     BookId = bookId,
                     Title = dto.Title,
                     BookAuthorGuid = dto.BookAuthorGuid,
-                    AuthorName = dto.AuthorName,
+                     AuthorName = dto.AuthorName,
                     AuthorLastName = dto.AuthorLastName,
-                    PublicationDate = dto.PublicationDate.Value.ToShortDateString()
-                };
+                    PublicationDate = dto.PublicationDate.Value.ToString("yyyy-MM-dd")
+            };
             }
             catch (Exception)
             {
@@ -109,8 +109,8 @@ namespace Application.Services.Book
                     BookAuthorGuid = dto.BookAuthorGuid,
                     AuthorName = dto.AuthorName,
                     AuthorLastName = dto.AuthorLastName,
-                    PublicationDate = dto.PublicationDate.Value.ToShortDateString()
-                }).ToList();
+                    PublicationDate = dto.PublicationDate.Value.ToString("yyyy-MM-dd")
+            }).ToList();
             }
             catch (Exception)
             {

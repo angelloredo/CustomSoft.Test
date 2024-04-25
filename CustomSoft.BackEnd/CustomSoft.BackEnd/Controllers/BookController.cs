@@ -38,8 +38,8 @@ namespace CustomSoft.BackEnd.Controllers
             }
         }
 
-        [HttpPut("{bookId}")]
-        public async Task<IActionResult> UpdateBookAsync(Guid bookId, UpdateBookCommand updateBookCommand)
+        [HttpPut]
+        public async Task<IActionResult> UpdateBookAsync(UpdateBookCommand updateBookCommand)
         {
             try
             {
@@ -76,7 +76,7 @@ namespace CustomSoft.BackEnd.Controllers
             try
             {
                 var book = await _bookService.GetBookByIdAsync(bookId);
-                return Ok(book);
+                return Ok(JsonConvert.SerializeObject(book));
             }
             catch (Exception ex)
             {
@@ -113,12 +113,13 @@ namespace CustomSoft.BackEnd.Controllers
 
                 // Obtener información sobre el archivo
                 var fileExtension = Path.GetExtension(file.FileName);
-                var fileName = $"{bookId} {fileExtension}";
+                var fileName = $"{bookId}{fileExtension}";
                 var fileSize = file.Length;
 
                 // Guardar el archivo en el servidor (aquí puedes almacenarlo en la ubicación que desees)
                 // Por ejemplo, puedes guardarlos en la carpeta "uploads" en la raíz del proyecto
-                var filePath = Path.Combine("uploads");
+                var filePath = Path.Combine("uploads", fileName);
+                //var filePath = $".../../files/{fileName}" + fileExtension;
 
                 if (!Directory.Exists(filePath))
                 {
@@ -145,7 +146,7 @@ namespace CustomSoft.BackEnd.Controllers
             }
             catch (Exception ex)
             {
-                return StatusCode(500, $"Ocurrió un error al cargar el archivo: {ex.Message}");
+                return Ok($"Ocurrió un error al cargar el archivo: {ex.Message}");
             }
         }
 

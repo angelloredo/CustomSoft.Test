@@ -1,0 +1,38 @@
+[
+    {
+      "id": "1",
+      "name": "Categoria 1",
+      "type": "directory",
+      "children": [
+        {
+          "id": "1-1",
+          "name": "SubCategoria 1",
+          "type": "directory",
+          "children": [
+            {
+              "id": "1-1-1",
+              "name": "Libro 1",
+              "type": "file"
+            },
+            {
+              "id": "1-1-2",
+              "name": "Libro 2",
+              "type": "file"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "Categoria 2",
+      "type": "directory",
+      "children": []
+    },
+    {
+      "id": "3",
+      "name": "Libro 1",
+      "type": "file"
+    }
+  ]
+  
