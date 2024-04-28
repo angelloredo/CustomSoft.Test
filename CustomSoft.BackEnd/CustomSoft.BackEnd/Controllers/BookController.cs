@@ -6,6 +6,7 @@ using MimeKit;
 using Newtonsoft.Json;
 using Serilog;
 using System;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace CustomSoft.BackEnd.Controllers
 {
@@ -29,6 +30,11 @@ namespace CustomSoft.BackEnd.Controllers
         [HttpPost]
         public async Task<IActionResult> InsertBookAsync(CreateBookCommand createBookCommand)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             try
             {
                 await _bookService.InsertBookAsync(createBookCommand);
@@ -47,6 +53,13 @@ namespace CustomSoft.BackEnd.Controllers
         {
             try
             {
+
+                if (!ModelState.IsValid)
+                {
+                    return BadRequest(ModelState);
+                }
+
+
                 await _bookService.UpdateBookAsync(updateBookCommand);
                 _logger.LogInformation("Book updated successfully");
                 return Ok();
@@ -96,6 +109,7 @@ namespace CustomSoft.BackEnd.Controllers
             {
                 var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
                 var apiKeySecret = _configuration["ApiKey"];
+
                 if (apiKey != apiKeySecret)
                 {
                     return Unauthorized();
@@ -132,37 +146,26 @@ namespace CustomSoft.BackEnd.Controllers
             catch (Exception ex)
             {
                 _logger.LogError($"Ocurrió un error al cargar el archivo: {ex.Message}");
-                return Ok($"Ocurrió un error al cargar el archivo: {ex.Message}");
+                return Problem($"Ocurrió un error al cargar el archivo: {ex.Message}");
             }
         }
 
-        [HttpGet("download/{fileName}")]
-        public IActionResult DownloadFile(string fileName)
+        [HttpGet("download/{bookId}")]
+        public async Task<IActionResult> DownloadFile(Guid bookId)
         {
             try
             {
-                // Ruta donde se encuentra el archivo (ajústala según tu estructura de archivos)
-                var filePath = Path.Combine("uploads", fileName);
+                var res = await _bookService.DownloadFile(bookId);
 
-                if (!System.IO.File.Exists(filePath))
-                {
-                    _logger.LogError("Ocurrió un error al cargar el archivo: Archivo no encontrado");
-                    return NotFound("El archivo solicitado no existe.");
-                }
+                if (res.contenido == null)
+                    return BadRequest($"Ocurrió un error al descargar el archivo: {res.errorMsj}");
 
-                // Obtener el tipo MIME del archivo
-                var contentType = MimeTypes.GetMimeType(filePath);
-
-                // Leer el archivo en bytes
-                var fileBytes = System.IO.File.ReadAllBytes(filePath);
-
-                // Retornar el archivo como un FileStreamResult
-                return File(fileBytes, contentType, fileName);
+                return File(res.contenido, "application/octet-stream", res.nombre);
             }
             catch (Exception ex)
             {
-                _logger.LogError($"Ocurrió un error al cargar el archivo: {ex.Message}");
-                return BadRequest();
+                _logger.LogError($"Ocurrió un error al descargar el archivo: {ex.Message}");
+                return Problem(detail: ex.Message, statusCode: StatusCodes.Status500InternalServerError);
             }
           
         }

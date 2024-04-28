@@ -10,11 +10,14 @@ namespace Domain.DTO.Book
     {
         public required Guid BookId { get; set; }
         public required string Title { get; set; }
-        public string? FileDirection { get; set; }
+        public string? FileExtension { get; set; }
         public DateTime? PublicationDate { get; set; }
         public string BookAuthorGuid { get; set; }
         public string AuthorName { get; set; }
+        public byte[] File{ get; set; }
         public string AuthorLastName { get; set; }
         public DateTime? AuthorBirthdate { get; set; }
+        public string? FileName { get; set; }
+
     }
 }

@@ -3,6 +3,7 @@ using System;
 using Domain.Infrastructure.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace CustomSoft.BackEnd.Migrations
 {
     [DbContext(typeof(BookMarketContext))]
-    partial class BookMarketContextModelSnapshot : ModelSnapshot
+    [Migration("20240427151635_updatebookaddfile")]
+    partial class updatebookaddfile
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -64,6 +67,9 @@ namespace CustomSoft.BackEnd.Migrations
 
                     b.Property<byte[]>("File")
                         .HasColumnType("bytea");
+
+                    b.Property<string>("FileDirection")
+                        .HasColumnType("text");
 
                     b.Property<string>("FileExtension")
                         .HasColumnType("text");

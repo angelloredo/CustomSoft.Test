@@ -1,4 +1,5 @@
 ﻿using Domain.DTO.Book;
+using Microsoft.AspNetCore.Http;
 using Npgsql;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace Domain.Infrastructure.Repositories.Book
         Task DeleteBookAsync(Guid bookId);
         Task<BookDTO> GetBookByIdAsync(Guid bookId);
         Task<IEnumerable<BookDTO>> GetBookListAsync();
+
     }
 }

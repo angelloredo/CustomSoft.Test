@@ -8,6 +8,7 @@ export interface Book {
     AuthorName?: string;
     AuthorLastName?: string;
     AuthorBirthdate?: string;
+    FileName?: string;
 }
 
 
@@ -20,4 +21,5 @@ export class BookViewModel implements Book {
     AuthorName?: string = '';
     AuthorLastName?: string = '';
     AuthorBirthdate?: string = '';
+    FileName?: string = '';
   }

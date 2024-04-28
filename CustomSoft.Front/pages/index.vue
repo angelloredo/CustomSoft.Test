@@ -5,7 +5,7 @@
       <v-card>
    
 
-        <MyComponent/>
+        <ListComponent/>
         
       
       </v-card>
@@ -14,12 +14,12 @@
 </template>
 
 <script>
-import MyComponent from '~/components/BookComponents/book-list-component.vue'
+import ListComponent from '~/components/BookComponents/book-list-component.vue'
 
 export default {
   name: 'IndexPage',
   components: {
-    MyComponent
+    ListComponent
   }
 }
 </script>

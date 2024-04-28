@@ -9,8 +9,10 @@
             <p><strong>ID del Autor del Libro:</strong> {{ book?.BookAuthorGuid }}</p>
             <p><strong>Nombre del Autor:</strong> {{ book?.AuthorName }}</p>
             <p><strong>Apellido del Autor:</strong> {{ book?.AuthorLastName }}</p>
-            <p><strong>Dirección del Archivo:</strong> {{ book?.FileDirection }}</p>
-            <p><strong>Fecha de Publicación:</strong> {{ book?.PublicationDate }}</p>
+
+            <p><strong>Fecha de Publicación:</strong> {{ book?.PublicationDate }} </p>
+            <p v-if="book?.FileName"><strong>Documento:</strong> {{ book?.FileName }} <v-icon :title="book.FileName"
+                    @click="downloadBook(book)">mdi-download</v-icon> </p>
         </div>
     </v-form>
 
@@ -18,7 +20,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType, ref } from 'vue';
-import bookService from '~/services/BookServices';
+import BookService from '~/services/BookServices';
 import { Book, BookViewModel } from '~/viewModel/BookViewModel';
 
 
@@ -35,13 +37,18 @@ export default defineComponent({
             book: null as Book | null,
             isLoading: false,
             error: '',
-            valid: false
+            valid: false,
+            bookService: new BookService(null)
         };
     },
     async mounted() {
+        this.bookService = new BookService(this);
         await this.fetchBook();
     },
     methods: {
+        downloadBook(book: Book | null) {
+            this.bookService.downloadFile(book as Book);
+        },
         resetForm() {
             // Reseteamos el formulario
             (this.$refs.form as any).reset();
@@ -49,10 +56,10 @@ export default defineComponent({
             this.valid = false;
         },
         async fetchBook() {
-            debugger
+
             this.isLoading = true;
             try {
-                this.book = await bookService.getBookById(this.bookId);
+                this.book = await this.bookService.getBookById(this.bookId);
             } catch (err) {
                 this.error = 'No se pudo cargar el libro.';
                 console.error('Error al obtener el libro:', err);

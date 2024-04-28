@@ -36,14 +36,13 @@ namespace Domain.Infrastructure.Repositories.Book
                         p_Title = book.Title,
                         p_FileExtension = book.FileExtension,
                         p_FileName = book.FileName,
-                        p_FileDirection = book.FileDirection,
+                        p_FileSize = book.FileSize,
+                        p_File = book.File,
                         p_PublicationDate = book.PublicationDate,
                         p_BookAuthorGuid = book.BookAuthorGuid
                     };
 
-                    await connection.ExecuteAsync("SELECT InsertBook(@p_BookId, @p_Title, @p_FileExtension, @p_FileName, @p_FileDirection, @p_PublicationDate, @p_BookAuthorGuid)", parameters);
-
-
+                    await connection.ExecuteAsync("SELECT insert_book(@p_BookId, @p_Title, @p_FileExtension, @p_FileName, @p_FileSize, @p_File, @p_PublicationDate, @p_BookAuthorGuid)", parameters);
                 }
             }
             catch (Exception ex)
@@ -51,6 +50,8 @@ namespace Domain.Infrastructure.Repositories.Book
                 throw;
             }
         }
+
+
 
         public async Task UpdateBookAsync(Domain.Entities.Book.Book book)
         {
@@ -62,16 +63,17 @@ namespace Domain.Infrastructure.Repositories.Book
 
                     var parameters = new
                     {
+                        p_BookId = book.BookId,
                         p_Title = book.Title,
                         p_FileExtension = book.FileExtension,
                         p_FileName = book.FileName,
-                        p_FileDirection = book.FileDirection,
+                        p_FileSize = book.FileSize,
+                        p_File = book.File,
                         p_PublicationDate = book.PublicationDate,
-                        p_BookAuthorGuid = book.BookAuthorGuid,
-                        p_BookId = book.BookId // Asegúrate de incluir el ID del libro
+                        p_BookAuthorGuid = book.BookAuthorGuid
                     };
 
-                    await connection.ExecuteAsync("SELECT UpdateBook(@p_BookId, @p_Title, @p_FileExtension, @p_FileName, @p_FileDirection, @p_PublicationDate, @p_BookAuthorGuid)", parameters);
+                    await connection.ExecuteAsync("SELECT update_book(@p_BookId, @p_Title, @p_FileExtension, @p_FileName, @p_FileSize, @p_File, @p_PublicationDate, @p_BookAuthorGuid)", parameters);
                 }
             }
             catch (Exception ex)
@@ -134,8 +136,8 @@ namespace Domain.Infrastructure.Repositories.Book
                 using (var connection = new NpgsqlConnection(_connectionString))
                 {
                     await connection.OpenAsync();
-
-                    return await connection.QueryAsync<BookDTO>("SELECT * FROM get_book_list()");
+                    var res = await connection.QueryAsync<BookDTO>("SELECT * FROM get_book_list()");
+                    return res;
                 }
             }
             catch (Exception)

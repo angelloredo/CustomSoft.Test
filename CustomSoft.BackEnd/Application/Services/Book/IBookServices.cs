@@ -26,6 +26,8 @@ namespace Application.Services.Book
 
         Task<List<BookViewModel>> GetBookListAsync();
         Task<BookViewModel> UploadFile(Guid bookId, IFormFile file);
+        Task<(string nombre, byte[] contenido, string errorMsj)> DownloadFile(Guid bookId);
+
 
     }
 }

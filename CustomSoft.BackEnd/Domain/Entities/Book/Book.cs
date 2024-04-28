@@ -12,8 +12,8 @@ namespace Domain.Entities.Book
         public required string Title { get; set; }
         public  string? FileExtension { get; set; }
         public  string? FileName { get; set; }
-        public  string? FileDirection { get; set; }
         public  string? FileSize { get; set; }
+        public byte[]? File {  get; set; }
         public DateTime? PublicationDate { get; set; }
         public string? BookAuthorGuid { get; set; }
     }

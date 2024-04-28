@@ -5,8 +5,10 @@ using Domain.Infrastructure.Repositories.Book;
 using Microsoft.AspNetCore.Hosting.Server;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Hosting;
+using Npgsql;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -88,9 +90,10 @@ namespace Application.Services.Book
                     BookId = bookId,
                     Title = dto.Title,
                     BookAuthorGuid = dto.BookAuthorGuid,
+                    FileName = dto.FileName,
                     AuthorName = dto.AuthorName,
                     AuthorLastName = dto.AuthorLastName,
-                    PublicationDate = dto.PublicationDate.Value.ToString("yyyy-MM-dd")
+                    PublicationDate = dto.PublicationDate != null ? dto.PublicationDate.Value.ToString("yyyy-MM-dd") : "-"
                 };
             }
             catch (Exception)
@@ -114,12 +117,12 @@ namespace Application.Services.Book
                     BookAuthorGuid = dto.BookAuthorGuid,
                     AuthorName = dto.AuthorName,
                     AuthorLastName = dto.AuthorLastName,
-                    PublicationDate = dto.PublicationDate.Value.ToString("yyyy-MM-dd")
+                    FileName = dto.FileName,
+                    PublicationDate = dto.PublicationDate != null ? dto.PublicationDate.Value.ToString("yyyy-MM-dd") : "-"
                 }).ToList();
             }
             catch (Exception)
             {
-
                 throw;
             }
         }
@@ -134,31 +137,27 @@ namespace Application.Services.Book
                 var fileExtension = Path.GetExtension(file.FileName);
                 var fileName = $"{bookId}{fileExtension}";
                 var fileSize = file.Length;
+                byte[] fileBytes;
 
-                //otener directorio en el que se guardara el archivo
-                var filePath = Path.Combine("Uploads", fileName);
-
-
-                if (!Directory.Exists(filePath))
-                    Directory.CreateDirectory(filePath);
-
-
-                using (var stream = new FileStream(filePath, FileMode.Create))
-                {
-                    await file.CopyToAsync(stream);
-                }
 
                 var book = await _bookRepository.GetBookByIdAsync(bookId);
+
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    await file.CopyToAsync(memoryStream);
+                    fileBytes = memoryStream.ToArray();
+                }
 
                 await _bookRepository.UpdateBookAsync(new Domain.Entities.Book.Book
                 {
                     BookId = bookId,
                     Title = book.Title,
+                    FileName = book.FileName,
                     BookAuthorGuid = book.BookAuthorGuid,
                     PublicationDate = book.PublicationDate,
-                    FileDirection = filePath,
                     FileSize = fileSize.ToString(),
                     FileExtension = fileExtension,
+                    File = fileBytes
                 });
 
                 return new BookViewModel
@@ -173,6 +172,27 @@ namespace Application.Services.Book
                 {
                     ErrorMsj = ex.Message
                 };
+            }
+        }
+
+        public async Task<(string nombre, byte[] contenido, string errorMsj)> DownloadFile(Guid bookId)
+        {
+            try
+            {
+                var book = await _bookRepository.GetBookByIdAsync(bookId);
+
+                if (book.File == null)
+                    return ("", null, "No existe el archivo.");
+
+                var nombre = book.FileName;
+                var contenido = book.File;
+
+             
+                return (nombre, contenido, "");
+            }
+            catch (Exception ex)
+            {
+                return ("", null, ex.Message);
             }
         }
     }

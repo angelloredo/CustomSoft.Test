@@ -14,7 +14,6 @@ namespace Application.ViewModels.Book
         }
         public  Guid BookId { get; set; }
         public  string Title { get; set; }
-        public string? FileDirection { get; set; }
         public string? FileName { get; set; }
         public string? PublicationDate { get; set; }
         public string BookAuthorGuid { get; set; }
