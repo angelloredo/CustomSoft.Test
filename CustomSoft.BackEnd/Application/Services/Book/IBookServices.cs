@@ -21,11 +21,11 @@ namespace Application.Services.Book
 
         Task DeleteBookAsync(Guid bookId);
 
-        Task<BookViewModel> GetBookByIdAsync(Guid bookId);
+        Task<ViewModels.Book.BookDTO> GetBookByIdAsync(Guid bookId);
 
 
-        Task<List<BookViewModel>> GetBookListAsync();
-        Task<BookViewModel> UploadFile(Guid bookId, IFormFile file);
+        Task<List<ViewModels.Book.BookDTO>> GetBookListAsync();
+        Task<ViewModels.Book.BookDTO> UploadFile(Guid bookId, IFormFile file);
         Task<(string nombre, byte[] contenido, string errorMsj)> DownloadFile(Guid bookId);
 
 

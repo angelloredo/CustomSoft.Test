@@ -1,0 +1,898 @@
+2024-04-29 00:00:31.227 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:00:31.244 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:31.245 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 17.8138ms
+2024-04-29 00:00:31.249 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:00:31.250 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:31.250 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:31.251 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:00:31.256 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:00:31.257 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 6.1395ms
+2024-04-29 00:00:31.257 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:31.257 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 7.859ms
+2024-04-29 00:00:37.645 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book/9a2c4d06-853e-4046-b602-eae60b3b4914 - null null
+2024-04-29 00:00:37.645 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:37.646 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book/9a2c4d06-853e-4046-b602-eae60b3b4914 - 204 null null 0.9153ms
+2024-04-29 00:00:37.647 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:33755/api/book/9a2c4d06-853e-4046-b602-eae60b3b4914 - null null
+2024-04-29 00:00:37.648 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:37.648 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:37.654 -05:00 [INF] Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBookAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:00:37.680 -05:00 [INF] Book deleted successfully
+2024-04-29 00:00:37.682 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:00:37.682 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd) in 27.4764ms
+2024-04-29 00:00:37.682 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:37.682 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:33755/api/book/9a2c4d06-853e-4046-b602-eae60b3b4914 - 200 null null 34.7397ms
+2024-04-29 00:00:37.685 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:00:37.685 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:37.685 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3409ms
+2024-04-29 00:00:37.686 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:00:37.686 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:37.686 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:37.686 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:00:37.689 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:00:37.690 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.3996ms
+2024-04-29 00:00:37.690 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:37.690 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 3.884ms
+2024-04-29 00:00:39.160 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book/ada83a47-d317-418f-819d-787218e95dcf - null null
+2024-04-29 00:00:39.160 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:39.160 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book/ada83a47-d317-418f-819d-787218e95dcf - 204 null null 0.5256ms
+2024-04-29 00:00:39.162 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:33755/api/book/ada83a47-d317-418f-819d-787218e95dcf - null null
+2024-04-29 00:00:39.162 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:39.162 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:39.162 -05:00 [INF] Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBookAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:00:39.165 -05:00 [INF] Book deleted successfully
+2024-04-29 00:00:39.166 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:00:39.166 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd) in 3.8143ms
+2024-04-29 00:00:39.166 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:39.167 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:33755/api/book/ada83a47-d317-418f-819d-787218e95dcf - 200 null null 4.4376ms
+2024-04-29 00:00:39.169 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:00:39.169 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:00:39.169 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:39.169 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:00:39.172 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:00:39.172 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.3905ms
+2024-04-29 00:00:39.172 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:00:39.172 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 3.7639ms
+2024-04-29 00:01:10.006 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:01:10.006 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:01:10.006 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.8589ms
+2024-04-29 00:01:10.008 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:01:10.008 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:01:10.008 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:01:10.008 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:01:10.012 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:01:10.015 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 6.8845ms
+2024-04-29 00:01:10.017 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:01:10.017 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 9.6533ms
+2024-04-29 00:14:20.944 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book/e024b529-e29f-4a03-b5a6-9d5e5e93445f - null null
+2024-04-29 00:14:20.981 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:14:20.981 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book/e024b529-e29f-4a03-b5a6-9d5e5e93445f - 204 null null 37.0208ms
+2024-04-29 00:14:20.986 -05:00 [INF] Request starting HTTP/1.1 DELETE http://localhost:33755/api/book/e024b529-e29f-4a03-b5a6-9d5e5e93445f - null null
+2024-04-29 00:14:20.986 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:14:20.986 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:14:20.986 -05:00 [INF] Route matched with {action = "DeleteBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DeleteBookAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:14:21.021 -05:00 [INF] Book deleted successfully
+2024-04-29 00:14:21.021 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:14:21.021 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd) in 34.9563ms
+2024-04-29 00:14:21.022 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DeleteBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:14:21.022 -05:00 [INF] Request finished HTTP/1.1 DELETE http://localhost:33755/api/book/e024b529-e29f-4a03-b5a6-9d5e5e93445f - 200 null null 35.8756ms
+2024-04-29 00:14:21.025 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:14:21.025 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:14:21.025 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.2673ms
+2024-04-29 00:14:21.026 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:14:21.026 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:14:21.026 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:14:21.027 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:14:21.030 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:14:21.030 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.5062ms
+2024-04-29 00:14:21.030 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:14:21.030 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.0094ms
+2024-04-29 00:18:01.597 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:18:01.597 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:18:01.598 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 1.6233ms
+2024-04-29 00:18:01.603 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:18:01.603 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:18:01.603 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:18:01.603 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:18:01.615 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:18:01.615 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 11.8512ms
+2024-04-29 00:18:01.615 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:18:01.616 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 12.8792ms
+2024-04-29 00:22:22.307 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:22:22.331 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:22:22.331 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:22:22.335 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:22:22.378 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:22:22.382 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 46.4553ms
+2024-04-29 00:22:22.382 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:22:22.382 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 74.7498ms
+2024-04-29 00:22:43.962 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/b339b0f2-564e-40c3-83a2-f7ce32235787 - null null
+2024-04-29 00:22:43.962 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:22:43.962 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:22:43.965 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:22:43.975 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:22:43.978 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 13.1332ms
+2024-04-29 00:22:43.978 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:22:43.979 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/b339b0f2-564e-40c3-83a2-f7ce32235787 - 200 null text/plain; charset=utf-8 16.9312ms
+2024-04-29 00:22:49.693 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:22:49.693 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:22:49.693 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:22:49.693 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:22:49.697 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:22:49.698 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 4.43ms
+2024-04-29 00:22:49.698 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:22:49.698 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 5.4654ms
+2024-04-29 00:22:52.988 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:22:52.988 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:22:52.988 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:22:52.988 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:22:52.993 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:22:52.994 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 5.75ms
+2024-04-29 00:22:52.994 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:22:52.995 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 null text/plain; charset=utf-8 6.5013ms
+2024-04-29 00:22:56.465 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:22:56.465 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:22:56.465 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:22:56.465 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:22:56.468 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:22:56.469 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 3.5694ms
+2024-04-29 00:22:56.469 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:22:56.469 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 4.12ms
+2024-04-29 00:23:10.847 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:23:10.848 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:23:10.848 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.5896ms
+2024-04-29 00:23:10.850 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:23:10.850 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:23:10.850 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:23:10.852 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:23:10.862 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:23:10.863 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 10.0568ms
+2024-04-29 00:23:10.863 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:23:10.863 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 13.2045ms
+2024-04-29 00:27:56.275 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:27:56.306 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:27:56.306 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:27:56.306 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:27:56.342 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:27:56.342 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 36.383ms
+2024-04-29 00:27:56.342 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:27:56.343 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 68.0325ms
+2024-04-29 00:28:21.385 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:28:21.385 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:28:21.386 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:28:21.386 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:28:21.393 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:28:21.394 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 8.4824ms
+2024-04-29 00:28:21.394 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:28:21.394 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 null text/plain; charset=utf-8 9.5052ms
+2024-04-29 00:28:29.090 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:28:29.091 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:28:29.091 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:28:29.091 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:28:29.094 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:28:29.101 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 9.7524ms
+2024-04-29 00:28:29.101 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:28:29.101 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 10.609ms
+2024-04-29 00:28:41.304 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:28:41.304 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:28:41.305 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.8819ms
+2024-04-29 00:28:41.306 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:28:41.307 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:28:41.307 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:28:41.307 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:28:41.310 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:28:41.311 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 4.0224ms
+2024-04-29 00:28:41.311 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:28:41.311 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 4.4853ms
+2024-04-29 00:29:52.241 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:29:52.242 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:29:52.242 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.769ms
+2024-04-29 00:29:52.244 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book - application/json 118
+2024-04-29 00:29:52.244 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:29:52.244 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:29:52.247 -05:00 [INF] Route matched with {action = "InsertBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertBookAsync(Application.Commands.Book.CreateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:30:26.355 -05:00 [INF] Applying migrations (CustomSoft.BackEnd)...
+2024-04-29 00:30:27.146 -05:00 [INF] Executed DbCommand (42ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 00:30:27.170 -05:00 [INF] Executed DbCommand (6ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-29 00:30:27.206 -05:00 [INF] Executed DbCommand (3ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 00:30:27.231 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 00:30:27.232 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-29 00:30:27.239 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-04-29 00:30:27.239 -05:00 [INF] Starting web host (CustomSoft.BackEnd)...
+2024-04-29 00:30:27.314 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-29 00:30:27.315 -05:00 [INF] Hosting environment: Development
+2024-04-29 00:30:27.315 -05:00 [INF] Content root path: C:\Users\PC41\source\repos\angelloredo\CustomSoft\CustomSoft.BackEnd\CustomSoft.BackEnd
+2024-04-29 00:30:27.336 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/swagger/index.html - null null
+2024-04-29 00:30:27.484 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/swagger/index.html - 200 null text/html;charset=utf-8 151.1609ms
+2024-04-29 00:30:27.524 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-29 00:30:27.530 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 4.9937ms
+2024-04-29 00:30:27.534 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/_vs/browserLink - null null
+2024-04-29 00:30:27.561 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/_vs/browserLink - 200 null text/javascript; charset=UTF-8 26.6333ms
+2024-04-29 00:30:27.613 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/swagger/v1/swagger.json - null null
+2024-04-29 00:30:27.702 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 88.8643ms
+2024-04-29 00:30:53.636 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:30:53.642 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:30:53.643 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 7.0034ms
+2024-04-29 00:30:53.648 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:30:53.650 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:30:53.652 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:30:53.666 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:30:53.798 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:30:53.802 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 133.8331ms
+2024-04-29 00:30:53.802 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:30:53.803 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 155.1104ms
+2024-04-29 00:31:56.710 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:31:56.711 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:31:56.711 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:31:56.718 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:31:56.755 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:31:56.758 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 39.5377ms
+2024-04-29 00:31:56.758 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:31:56.758 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 48.4292ms
+2024-04-29 00:32:05.190 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:32:05.191 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:32:05.191 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:32:05.194 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:32:05.201 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:32:05.202 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 7.6563ms
+2024-04-29 00:32:05.202 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:32:05.202 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 null text/plain; charset=utf-8 12.3771ms
+2024-04-29 00:32:16.610 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:32:16.610 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:32:16.610 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.6654ms
+2024-04-29 00:32:16.615 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:32:16.615 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:32:16.616 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:32:16.618 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:32:16.631 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:32:16.632 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 13.81ms
+2024-04-29 00:32:16.632 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:32:16.632 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 17.1621ms
+2024-04-29 00:33:15.189 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:33:15.190 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:15.190 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.8685ms
+2024-04-29 00:33:15.192 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book - application/json 119
+2024-04-29 00:33:15.192 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:15.192 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:15.195 -05:00 [INF] Route matched with {action = "InsertBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertBookAsync(Application.Commands.Book.CreateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:33:18.407 -05:00 [INF] Book inserted successfully
+2024-04-29 00:33:18.409 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:33:18.409 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd) in 3214.3848ms
+2024-04-29 00:33:18.409 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:18.410 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book - 200 null null 3217.7653ms
+2024-04-29 00:33:18.417 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:33:18.417 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:18.417 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.8246ms
+2024-04-29 00:33:18.419 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:33:18.419 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:18.419 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:18.419 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:33:18.423 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:33:18.424 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 4.3101ms
+2024-04-29 00:33:18.424 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:18.424 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.9924ms
+2024-04-29 00:33:37.366 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:33:37.366 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:37.366 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.9491ms
+2024-04-29 00:33:37.368 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:33:37.368 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:37.368 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:37.368 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:33:37.373 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:33:37.373 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 4.7655ms
+2024-04-29 00:33:37.373 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:37.373 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 5.4273ms
+2024-04-29 00:33:37.381 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/21be24f0-13d8-473d-9274-e9928b3aa683 - null null
+2024-04-29 00:33:37.382 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:37.382 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:37.382 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:33:37.385 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:33:37.386 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 3.9444ms
+2024-04-29 00:33:37.386 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:37.386 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/21be24f0-13d8-473d-9274-e9928b3aa683 - 200 null text/plain; charset=utf-8 4.5998ms
+2024-04-29 00:33:49.153 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:33:49.154 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:49.154 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.8699ms
+2024-04-29 00:33:49.156 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:33755/api/book - application/json 253
+2024-04-29 00:33:49.157 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:49.157 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:49.159 -05:00 [INF] Route matched with {action = "UpdateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookAsync(Application.Commands.Book.UpdateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:33:49.174 -05:00 [INF] Book updated successfully
+2024-04-29 00:33:49.175 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:33:49.175 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd) in 16.1179ms
+2024-04-29 00:33:49.175 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:49.179 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:33755/api/book - 200 null null 22.6567ms
+2024-04-29 00:33:49.182 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book/upload/21be24f0-13d8-473d-9274-e9928b3aa683 - multipart/form-data; boundary=----WebKitFormBoundary0F9RsrycflvikYtL 276970
+2024-04-29 00:33:49.183 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:49.183 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 00:33:49.185 -05:00 [INF] Route matched with {action = "Upload", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(System.Guid, Microsoft.AspNetCore.Http.IFormFile) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:33:49.219 -05:00 [INF] Executing OkObjectResult, writing value of type 'Application.ViewModels.Book.BookViewModel'.
+2024-04-29 00:33:49.224 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd) in 38.4108ms
+2024-04-29 00:33:49.224 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 00:33:49.224 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book/upload/21be24f0-13d8-473d-9274-e9928b3aa683 - 200 null application/json; charset=utf-8 41.9836ms
+2024-04-29 00:33:49.226 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:33:49.226 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:49.226 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3308ms
+2024-04-29 00:33:49.228 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:33:49.228 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:33:49.228 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:49.228 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:33:49.231 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:33:49.232 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.9582ms
+2024-04-29 00:33:49.232 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:33:49.232 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.3825ms
+2024-04-29 00:34:01.412 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:34:01.412 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:01.413 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.9623ms
+2024-04-29 00:34:01.416 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:34:01.416 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:01.416 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:01.416 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:34:01.422 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:34:01.422 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 5.8944ms
+2024-04-29 00:34:01.422 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:01.422 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 6.5773ms
+2024-04-29 00:34:01.426 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/e6e72d07-d1a4-4299-92ca-9d76cd06cede - null null
+2024-04-29 00:34:01.427 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:01.427 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:01.427 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:34:01.431 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:34:01.431 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 4.2743ms
+2024-04-29 00:34:01.431 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:01.431 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/e6e72d07-d1a4-4299-92ca-9d76cd06cede - 200 null text/plain; charset=utf-8 4.8055ms
+2024-04-29 00:34:07.833 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:34:07.834 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:07.834 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.5205ms
+2024-04-29 00:34:07.836 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:33755/api/book - application/json 253
+2024-04-29 00:34:07.836 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:07.836 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:07.836 -05:00 [INF] Route matched with {action = "UpdateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookAsync(Application.Commands.Book.UpdateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:34:07.841 -05:00 [INF] Book updated successfully
+2024-04-29 00:34:07.841 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:34:07.841 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd) in 5.4092ms
+2024-04-29 00:34:07.841 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:07.842 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:33755/api/book - 200 null null 6.0293ms
+2024-04-29 00:34:07.844 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book/upload/e6e72d07-d1a4-4299-92ca-9d76cd06cede - multipart/form-data; boundary=----WebKitFormBoundaryp4rUgJNWnKNjoqQ4 276970
+2024-04-29 00:34:07.844 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:07.844 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 00:34:07.845 -05:00 [INF] Route matched with {action = "Upload", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(System.Guid, Microsoft.AspNetCore.Http.IFormFile) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:34:07.856 -05:00 [INF] Executing OkObjectResult, writing value of type 'Application.ViewModels.Book.BookViewModel'.
+2024-04-29 00:34:07.857 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd) in 12.2139ms
+2024-04-29 00:34:07.857 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 00:34:07.857 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book/upload/e6e72d07-d1a4-4299-92ca-9d76cd06cede - 200 null application/json; charset=utf-8 12.8078ms
+2024-04-29 00:34:07.860 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:34:07.860 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:07.860 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3285ms
+2024-04-29 00:34:07.862 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:34:07.862 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:07.862 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:07.862 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:34:07.865 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:34:07.866 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.8317ms
+2024-04-29 00:34:07.866 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:07.866 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.2876ms
+2024-04-29 00:34:14.148 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:34:14.148 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:14.148 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.5096ms
+2024-04-29 00:34:14.150 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:34:14.150 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:34:14.150 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:14.150 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:34:14.153 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:34:14.155 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 4.4679ms
+2024-04-29 00:34:14.155 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:34:14.155 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 5.3438ms
+2024-04-29 00:47:35.241 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:47:35.244 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:47:35.244 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 3.231ms
+2024-04-29 00:47:35.247 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:47:35.247 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:47:35.247 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:47:35.247 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:47:35.284 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:47:35.285 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 37.8178ms
+2024-04-29 00:47:35.285 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:47:35.285 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 38.6984ms
+2024-04-29 00:50:13.160 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/e6e72d07-d1a4-4299-92ca-9d76cd06cede - null null
+2024-04-29 00:50:13.161 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:50:13.161 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:50:13.161 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:50:13.167 -05:00 [INF] Executing FileContentResult, sending file with download name 'José Ángel Loredo Hernández. CV - Ingles.pdf' ...
+2024-04-29 00:50:13.172 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 11.4161ms
+2024-04-29 00:50:13.172 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:50:13.173 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/e6e72d07-d1a4-4299-92ca-9d76cd06cede - 200 276744 application/octet-stream 12.8589ms
+2024-04-29 00:50:23.533 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:50:23.534 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:50:23.534 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:50:23.534 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:50:23.537 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:50:23.538 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 3.8775ms
+2024-04-29 00:50:23.538 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:50:23.538 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 null text/plain; charset=utf-8 4.6338ms
+2024-04-29 00:50:31.760 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 00:50:31.761 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:50:31.761 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:50:31.761 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:50:31.764 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 00:50:31.765 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 3.9429ms
+2024-04-29 00:50:31.765 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:50:31.765 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 4.6483ms
+2024-04-29 00:51:21.154 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:51:21.155 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:51:21.155 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.3718ms
+2024-04-29 00:51:21.157 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:51:21.157 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:51:21.158 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:51:21.158 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:51:21.167 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:51:21.168 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 10.8204ms
+2024-04-29 00:51:21.169 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:51:21.169 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 11.4962ms
+2024-04-29 00:52:15.763 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:52:15.763 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:15.763 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.4206ms
+2024-04-29 00:52:15.765 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book - application/json 119
+2024-04-29 00:52:15.765 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:15.765 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:15.765 -05:00 [INF] Route matched with {action = "InsertBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertBookAsync(Application.Commands.Book.CreateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:15.772 -05:00 [INF] Book inserted successfully
+2024-04-29 00:52:15.772 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:52:15.772 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd) in 7.2274ms
+2024-04-29 00:52:15.772 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:15.772 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book - 200 null null 7.8316ms
+2024-04-29 00:52:15.776 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:52:15.776 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:15.776 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3104ms
+2024-04-29 00:52:15.777 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:52:15.777 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:15.777 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:15.777 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:15.781 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:52:15.785 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 7.2851ms
+2024-04-29 00:52:15.785 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:15.785 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 7.842ms
+2024-04-29 00:52:23.443 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:52:23.444 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:23.444 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.544ms
+2024-04-29 00:52:23.445 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:52:23.445 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:23.445 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:23.445 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:52:23.449 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:52:23.449 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 3.8653ms
+2024-04-29 00:52:23.449 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:23.450 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 4.2434ms
+2024-04-29 00:52:23.458 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/72798e69-7019-483c-b3ee-6e188d4fecf8 - null null
+2024-04-29 00:52:23.458 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:23.458 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:23.459 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:23.462 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:52:23.463 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 4.0565ms
+2024-04-29 00:52:23.463 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:23.463 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/72798e69-7019-483c-b3ee-6e188d4fecf8 - 200 null text/plain; charset=utf-8 4.5942ms
+2024-04-29 00:52:49.406 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:52:49.406 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:49.406 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.2993ms
+2024-04-29 00:52:49.408 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:33755/api/book - application/json 253
+2024-04-29 00:52:49.408 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:49.408 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:49.408 -05:00 [INF] Route matched with {action = "UpdateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookAsync(Application.Commands.Book.UpdateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:49.445 -05:00 [INF] Book updated successfully
+2024-04-29 00:52:49.445 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 00:52:49.445 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd) in 37.1452ms
+2024-04-29 00:52:49.445 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:49.446 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:33755/api/book - 200 null null 37.8605ms
+2024-04-29 00:52:49.449 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book/upload/72798e69-7019-483c-b3ee-6e188d4fecf8 - multipart/form-data; boundary=----WebKitFormBoundaryDa9DnAqz2lsrA8kA 63511
+2024-04-29 00:52:49.449 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:49.449 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 00:52:49.449 -05:00 [INF] Route matched with {action = "Upload", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(System.Guid, Microsoft.AspNetCore.Http.IFormFile) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:49.456 -05:00 [INF] Executing OkObjectResult, writing value of type 'Application.ViewModels.Book.BookViewModel'.
+2024-04-29 00:52:49.456 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd) in 7.2508ms
+2024-04-29 00:52:49.456 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 00:52:49.457 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book/upload/72798e69-7019-483c-b3ee-6e188d4fecf8 - 200 null application/json; charset=utf-8 7.8587ms
+2024-04-29 00:52:49.459 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:52:49.459 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:49.459 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.2523ms
+2024-04-29 00:52:49.461 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:52:49.461 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:49.461 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:49.461 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:49.464 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:52:49.464 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.6949ms
+2024-04-29 00:52:49.465 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:52:49.465 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.1037ms
+2024-04-29 00:52:57.460 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/72798e69-7019-483c-b3ee-6e188d4fecf8 - null null
+2024-04-29 00:52:57.461 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:52:57.461 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:52:57.461 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:52:57.464 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSE ANGEL LOREDO CV 27032024.pdf' ...
+2024-04-29 00:52:57.465 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 3.8825ms
+2024-04-29 00:52:57.465 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 00:52:57.465 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/72798e69-7019-483c-b3ee-6e188d4fecf8 - 200 63299 application/octet-stream 4.7514ms
+2024-04-29 00:55:25.392 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:55:25.392 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:25.393 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.4481ms
+2024-04-29 00:55:25.395 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:55:25.395 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:25.395 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:25.395 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:55:25.399 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:55:25.402 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 7.3997ms
+2024-04-29 00:55:25.402 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:25.403 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 8.1649ms
+2024-04-29 00:55:27.847 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 00:55:27.847 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:27.847 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.35ms
+2024-04-29 00:55:27.849 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 00:55:27.849 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:27.850 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:27.850 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 00:55:27.853 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:55:27.857 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 6.9078ms
+2024-04-29 00:55:27.857 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:27.857 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 7.8295ms
+2024-04-29 00:55:42.775 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:55:42.775 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:42.775 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.4911ms
+2024-04-29 00:55:42.776 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book - application/json 343
+2024-04-29 00:55:42.777 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:42.777 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:42.777 -05:00 [INF] Route matched with {action = "InsertBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertBookAsync(Application.Commands.Book.CreateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:55:42.779 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-29 00:55:42.793 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd) in 16.7535ms
+2024-04-29 00:55:42.793 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:42.794 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book - 400 null application/problem+json; charset=utf-8 17.1379ms
+2024-04-29 00:55:42.800 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 00:55:42.800 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:42.801 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3193ms
+2024-04-29 00:55:42.802 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 00:55:42.802 -05:00 [INF] CORS policy execution successful.
+2024-04-29 00:55:42.802 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:42.803 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 00:55:42.805 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 00:55:42.806 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.0956ms
+2024-04-29 00:55:42.806 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 00:55:42.806 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 3.4586ms
+2024-04-29 01:03:33.372 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:03:33.372 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:03:33.400 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 28.8795ms
+2024-04-29 01:03:33.428 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:03:33.429 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:03:33.429 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:03:33.431 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:03:33.464 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:03:33.464 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 33.3523ms
+2024-04-29 01:03:33.464 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:03:33.464 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 36.1444ms
+2024-04-29 01:03:38.854 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:03:38.854 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:03:38.854 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3718ms
+2024-04-29 01:03:38.856 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:03:38.857 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:03:38.857 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:03:38.857 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:03:38.860 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:03:38.861 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.6658ms
+2024-04-29 01:03:38.861 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:03:38.861 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.5016ms
+2024-04-29 01:31:49.152 -05:00 [INF] Applying migrations (CustomSoft.BackEnd)...
+2024-04-29 01:31:49.847 -05:00 [INF] Executed DbCommand (40ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 01:31:49.867 -05:00 [INF] Executed DbCommand (5ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-29 01:31:49.901 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 01:31:49.929 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 01:31:49.930 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-29 01:31:49.937 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-04-29 01:31:49.938 -05:00 [INF] Starting web host (CustomSoft.BackEnd)...
+2024-04-29 01:31:50.005 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-29 01:31:50.005 -05:00 [INF] Hosting environment: Development
+2024-04-29 01:31:50.005 -05:00 [INF] Content root path: C:\Users\PC41\source\repos\angelloredo\CustomSoft\CustomSoft.BackEnd\CustomSoft.BackEnd
+2024-04-29 01:31:50.024 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/swagger/index.html - null null
+2024-04-29 01:31:50.177 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/swagger/index.html - 200 null text/html;charset=utf-8 156.5884ms
+2024-04-29 01:31:50.181 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-29 01:31:50.184 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 2.6302ms
+2024-04-29 01:31:50.214 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/_vs/browserLink - null null
+2024-04-29 01:31:50.243 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/_vs/browserLink - 200 null text/javascript; charset=UTF-8 28.8005ms
+2024-04-29 01:31:50.310 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/swagger/v1/swagger.json - null null
+2024-04-29 01:31:50.408 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 97.2395ms
+2024-04-29 01:33:10.209 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:33:10.215 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:33:10.216 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 7.0857ms
+2024-04-29 01:33:10.219 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:33:10.221 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:33:10.224 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:33:10.240 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:33:10.373 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:33:10.384 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 138.7517ms
+2024-04-29 01:33:10.385 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:33:10.387 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 167.4876ms
+2024-04-29 01:33:45.394 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:33:45.395 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:33:45.395 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 1.4555ms
+2024-04-29 01:33:45.400 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:33:45.401 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:33:45.401 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:33:45.401 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:33:45.410 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:33:45.411 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 9.704ms
+2024-04-29 01:33:45.411 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:33:45.411 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 10.8666ms
+2024-04-29 01:34:40.492 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 01:34:40.493 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:34:40.493 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 01:34:40.503 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:34:40.543 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 01:34:40.546 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 42.5904ms
+2024-04-29 01:34:40.546 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 01:34:40.547 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 55.0955ms
+2024-04-29 01:34:49.754 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 01:34:49.755 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:34:49.755 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 01:34:49.758 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:34:49.764 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:34:49.764 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 5.6229ms
+2024-04-29 01:34:49.764 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 01:34:49.764 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 null text/plain; charset=utf-8 10.9345ms
+2024-04-29 01:35:14.508 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 01:35:14.509 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:35:14.509 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.7286ms
+2024-04-29 01:35:14.515 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 01:35:14.515 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:35:14.515 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:35:14.519 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 01:35:14.542 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:35:14.543 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 23.8315ms
+2024-04-29 01:35:14.543 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:35:14.543 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 28.1237ms
+2024-04-29 01:36:29.374 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:36:29.375 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:29.375 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.7449ms
+2024-04-29 01:36:29.377 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book - application/json 119
+2024-04-29 01:36:29.377 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:29.377 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:29.380 -05:00 [INF] Route matched with {action = "InsertBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertBookAsync(Application.Commands.Book.CreateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:36:29.411 -05:00 [INF] Book inserted successfully
+2024-04-29 01:36:29.414 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 01:36:29.414 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd) in 34.0397ms
+2024-04-29 01:36:29.414 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:29.415 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book - 200 null null 37.849ms
+2024-04-29 01:36:29.417 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:36:29.417 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:29.418 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.3398ms
+2024-04-29 01:36:29.419 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:36:29.419 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:29.419 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:29.419 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:36:29.428 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:36:29.432 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 12.6618ms
+2024-04-29 01:36:29.432 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:29.432 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 13.2322ms
+2024-04-29 01:36:52.923 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 01:36:52.923 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:52.923 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.7013ms
+2024-04-29 01:36:52.925 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 01:36:52.925 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:52.925 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:52.925 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 01:36:52.959 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:36:52.960 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 34.2797ms
+2024-04-29 01:36:52.960 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:52.960 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 35.0787ms
+2024-04-29 01:36:52.963 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/a8c206ff-2c2b-4ce8-bba3-1d92eb33c782 - null null
+2024-04-29 01:36:52.963 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:36:52.963 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:52.963 -05:00 [INF] Route matched with {action = "GetBookById", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookByIdAsync(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:36:52.967 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:36:52.968 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd) in 4.3492ms
+2024-04-29 01:36:52.968 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookByIdAsync (CustomSoft.BackEnd)'
+2024-04-29 01:36:52.968 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/a8c206ff-2c2b-4ce8-bba3-1d92eb33c782 - 200 null text/plain; charset=utf-8 4.8807ms
+2024-04-29 01:37:04.999 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:37:04.999 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:37:05.000 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.4701ms
+2024-04-29 01:37:05.001 -05:00 [INF] Request starting HTTP/1.1 PUT http://localhost:33755/api/book - application/json 255
+2024-04-29 01:37:05.001 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:37:05.001 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 01:37:05.003 -05:00 [INF] Route matched with {action = "UpdateBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] UpdateBookAsync(Application.Commands.Book.UpdateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:37:05.014 -05:00 [INF] Book updated successfully
+2024-04-29 01:37:05.015 -05:00 [INF] Executing StatusCodeResult, setting HTTP status code 200
+2024-04-29 01:37:05.015 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd) in 11.1156ms
+2024-04-29 01:37:05.015 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.UpdateBookAsync (CustomSoft.BackEnd)'
+2024-04-29 01:37:05.015 -05:00 [INF] Request finished HTTP/1.1 PUT http://localhost:33755/api/book - 200 null null 14.0314ms
+2024-04-29 01:37:05.018 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book/upload/a8c206ff-2c2b-4ce8-bba3-1d92eb33c782 - multipart/form-data; boundary=----WebKitFormBoundary18em0ClHKaZ6yh6P 63511
+2024-04-29 01:37:05.018 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:37:05.018 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 01:37:05.021 -05:00 [INF] Route matched with {action = "Upload", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] Upload(System.Guid, Microsoft.AspNetCore.Http.IFormFile) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:37:05.041 -05:00 [INF] Executing OkObjectResult, writing value of type 'Application.ViewModels.Book.BookViewModel'.
+2024-04-29 01:37:05.044 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd) in 23.419ms
+2024-04-29 01:37:05.044 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.Upload (CustomSoft.BackEnd)'
+2024-04-29 01:37:05.045 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book/upload/a8c206ff-2c2b-4ce8-bba3-1d92eb33c782 - 200 null application/json; charset=utf-8 26.7413ms
+2024-04-29 01:37:05.048 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:37:05.049 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:37:05.049 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.4405ms
+2024-04-29 01:37:05.050 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:37:05.050 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:37:05.050 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:37:05.050 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:37:05.054 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:37:05.058 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 7.2876ms
+2024-04-29 01:37:05.058 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:37:05.058 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 8.3658ms
+2024-04-29 01:37:09.769 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/a8c206ff-2c2b-4ce8-bba3-1d92eb33c782 - null null
+2024-04-29 01:37:09.769 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:37:09.769 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 01:37:09.769 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:37:09.773 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSE ANGEL LOREDO CV 27032024.pdf' ...
+2024-04-29 01:37:09.774 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 4.7744ms
+2024-04-29 01:37:09.774 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 01:37:09.774 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/a8c206ff-2c2b-4ce8-bba3-1d92eb33c782 - 200 63299 application/octet-stream 5.6078ms
+2024-04-29 01:39:29.170 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:39:29.170 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:39:29.170 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.5673ms
+2024-04-29 01:39:29.173 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:39:29.173 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:39:29.173 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:39:29.173 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:39:29.177 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:39:29.181 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 7.7967ms
+2024-04-29 01:39:29.181 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:39:29.181 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 8.3806ms
+2024-04-29 01:42:26.478 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 01:42:26.511 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:42:26.511 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 35.8215ms
+2024-04-29 01:42:26.514 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 01:42:26.514 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:42:26.514 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:42:26.514 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 01:42:26.552 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:42:26.552 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 38.21ms
+2024-04-29 01:42:26.552 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:42:26.552 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 38.9324ms
+2024-04-29 01:42:31.336 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:42:31.336 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:42:31.336 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.4565ms
+2024-04-29 01:42:31.338 -05:00 [INF] Request starting HTTP/1.1 POST http://localhost:33755/api/book - application/json 343
+2024-04-29 01:42:31.339 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:42:31.339 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 01:42:31.339 -05:00 [INF] Route matched with {action = "InsertBook", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] InsertBookAsync(Application.Commands.Book.CreateBookCommand) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:42:31.341 -05:00 [INF] Executing BadRequestObjectResult, writing value of type 'Microsoft.AspNetCore.Mvc.ValidationProblemDetails'.
+2024-04-29 01:42:31.351 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd) in 12.2515ms
+2024-04-29 01:42:31.351 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.InsertBookAsync (CustomSoft.BackEnd)'
+2024-04-29 01:42:31.351 -05:00 [INF] Request finished HTTP/1.1 POST http://localhost:33755/api/book - 400 null application/problem+json; charset=utf-8 12.8486ms
+2024-04-29 01:42:31.359 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 01:42:31.359 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:42:31.359 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 0.414ms
+2024-04-29 01:42:31.360 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 01:42:31.360 -05:00 [INF] CORS policy execution successful.
+2024-04-29 01:42:31.361 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:42:31.361 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 01:42:31.364 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 01:42:31.365 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 3.9111ms
+2024-04-29 01:42:31.365 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 01:42:31.365 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 4.3629ms
+2024-04-29 09:01:13.618 -05:00 [INF] Applying migrations (CustomSoft.BackEnd)...
+2024-04-29 09:01:15.307 -05:00 [INF] Executed DbCommand (110ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 09:01:15.338 -05:00 [INF] Executed DbCommand (8ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-29 09:01:15.384 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 09:01:15.425 -05:00 [INF] Executed DbCommand (2ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT EXISTS (
+    SELECT 1 FROM pg_catalog.pg_class c
+    JOIN pg_catalog.pg_namespace n ON n.oid=c.relnamespace
+    WHERE n.nspname='public' AND
+          c.relname='__EFMigrationsHistory'
+)
+2024-04-29 09:01:15.427 -05:00 [INF] Executed DbCommand (1ms) [Parameters=[], CommandType='"Text"', CommandTimeout='30']
+SELECT "MigrationId", "ProductVersion"
+FROM "__EFMigrationsHistory"
+ORDER BY "MigrationId";
+2024-04-29 09:01:15.440 -05:00 [INF] No migrations were applied. The database is already up to date.
+2024-04-29 09:01:15.440 -05:00 [INF] Starting web host (CustomSoft.BackEnd)...
+2024-04-29 09:01:15.912 -05:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-04-29 09:01:15.912 -05:00 [INF] Hosting environment: Development
+2024-04-29 09:01:15.912 -05:00 [INF] Content root path: C:\Users\PC41\source\repos\angelloredo\CustomSoft\CustomSoft.BackEnd\CustomSoft.BackEnd
+2024-04-29 09:01:16.087 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/swagger/index.html - null null
+2024-04-29 09:01:16.423 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/swagger/index.html - 200 null text/html;charset=utf-8 339.9369ms
+2024-04-29 09:01:16.447 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/_framework/aspnetcore-browser-refresh.js - null null
+2024-04-29 09:01:16.450 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/_framework/aspnetcore-browser-refresh.js - 200 13772 application/javascript; charset=utf-8 2.9802ms
+2024-04-29 09:01:16.461 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/_vs/browserLink - null null
+2024-04-29 09:01:16.500 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/_vs/browserLink - 200 null text/javascript; charset=UTF-8 39.6615ms
+2024-04-29 09:01:16.607 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/swagger/v1/swagger.json - null null
+2024-04-29 09:01:16.718 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 110.6648ms
+2024-04-29 09:01:55.707 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/book - null null
+2024-04-29 09:01:55.716 -05:00 [INF] CORS policy execution successful.
+2024-04-29 09:01:55.717 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/book - 204 null null 10.356ms
+2024-04-29 09:01:55.719 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 09:01:55.720 -05:00 [INF] CORS policy execution successful.
+2024-04-29 09:01:55.722 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 09:01:55.734 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 09:01:56.025 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 09:01:56.028 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 292.9337ms
+2024-04-29 09:01:56.029 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 09:01:56.030 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 310.8297ms
+2024-04-29 09:01:56.894 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book - null null
+2024-04-29 09:01:56.895 -05:00 [INF] CORS policy execution successful.
+2024-04-29 09:01:56.895 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 09:01:56.895 -05:00 [INF] Route matched with {action = "GetBookList", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetBookListAsync() on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 09:01:56.899 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 09:01:56.900 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd) in 4.9548ms
+2024-04-29 09:01:56.900 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.GetBookListAsync (CustomSoft.BackEnd)'
+2024-04-29 09:01:56.900 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book - 200 null text/plain; charset=utf-8 6.4152ms
+2024-04-29 09:02:01.182 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - null null
+2024-04-29 09:02:01.183 -05:00 [INF] CORS policy execution successful.
+2024-04-29 09:02:01.183 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 09:02:01.189 -05:00 [INF] Route matched with {action = "DownloadFile", controller = "Book"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] DownloadFile(System.Guid) on controller CustomSoft.BackEnd.Controllers.BookController (CustomSoft.BackEnd).
+2024-04-29 09:02:01.220 -05:00 [INF] Executing FileContentResult, sending file with download name 'JOSEANGELLOREDOCV27032024.pdf' ...
+2024-04-29 09:02:01.223 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd) in 33.682ms
+2024-04-29 09:02:01.223 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.BookController.DownloadFile (CustomSoft.BackEnd)'
+2024-04-29 09:02:01.224 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/book/download/d39d05d1-81a9-4707-a6a0-917c47dd9f4b - 200 63299 application/octet-stream 41.2939ms
+2024-04-29 09:02:15.934 -05:00 [INF] Request starting HTTP/1.1 OPTIONS http://localhost:33755/api/Author - null null
+2024-04-29 09:02:15.935 -05:00 [INF] CORS policy execution successful.
+2024-04-29 09:02:15.935 -05:00 [INF] Request finished HTTP/1.1 OPTIONS http://localhost:33755/api/Author - 204 null null 0.9068ms
+2024-04-29 09:02:15.937 -05:00 [INF] Request starting HTTP/1.1 GET http://localhost:33755/api/Author - null null
+2024-04-29 09:02:15.937 -05:00 [INF] CORS policy execution successful.
+2024-04-29 09:02:15.938 -05:00 [INF] Executing endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 09:02:15.940 -05:00 [INF] Route matched with {action = "GetAuthorkList", controller = "Author"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.IActionResult] GetAuthorkListAsync() on controller CustomSoft.BackEnd.Controllers.AuthorController (CustomSoft.BackEnd).
+2024-04-29 09:02:15.953 -05:00 [INF] Executing OkObjectResult, writing value of type 'System.String'.
+2024-04-29 09:02:15.954 -05:00 [INF] Executed action CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd) in 13.844ms
+2024-04-29 09:02:15.954 -05:00 [INF] Executed endpoint 'CustomSoft.BackEnd.Controllers.AuthorController.GetAuthorkListAsync (CustomSoft.BackEnd)'
+2024-04-29 09:02:15.955 -05:00 [INF] Request finished HTTP/1.1 GET http://localhost:33755/api/Author - 200 null text/plain; charset=utf-8 17.4196ms

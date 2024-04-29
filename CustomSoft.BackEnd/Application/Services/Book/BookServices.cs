@@ -12,6 +12,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BookDTO = Application.ViewModels.Book.BookDTO;
 
 namespace Application.Services.Book
 {
@@ -79,13 +80,13 @@ namespace Application.Services.Book
 
         }
 
-        public async Task<BookViewModel> GetBookByIdAsync(Guid bookId)
+        public async Task<ViewModels.Book.BookDTO> GetBookByIdAsync(Guid bookId)
         {
             try
             {
-                BookDTO dto = await _bookRepository.GetBookByIdAsync(bookId);
+                Domain.DTO.Book.BookDTO dto = await _bookRepository.GetBookByIdAsync(bookId);
 
-                return new BookViewModel
+                return new ViewModels.Book.BookDTO
                 {
                     BookId = bookId,
                     Title = dto.Title,
@@ -104,13 +105,13 @@ namespace Application.Services.Book
         }
 
 
-        public async Task<List<BookViewModel>> GetBookListAsync()
+        public async Task<List<ViewModels.Book.BookDTO>> GetBookListAsync()
         {
             try
             {
                 var list = await _bookRepository.GetBookListAsync();
 
-                return list.Select(dto => new BookViewModel
+                return list.Select(dto => new BookDTO
                 {
                     BookId = dto.BookId,
                     Title = dto.Title,
@@ -128,7 +129,7 @@ namespace Application.Services.Book
         }
 
 
-        public async Task<BookViewModel> UploadFile(Guid bookId, IFormFile file)
+        public async Task<ViewModels.Book.BookDTO> UploadFile(Guid bookId, IFormFile file)
         {
             try
             {
@@ -160,7 +161,7 @@ namespace Application.Services.Book
                     File = fileBytes
                 });
 
-                return new BookViewModel
+                return new ViewModels.Book.BookDTO
                 {
                     BookId = bookId,
                     FileName = fileName
@@ -168,7 +169,7 @@ namespace Application.Services.Book
             }
             catch (Exception ex)
             {
-                return new BookViewModel
+                return new ViewModels.Book.BookDTO
                 {
                     ErrorMsj = ex.Message
                 };

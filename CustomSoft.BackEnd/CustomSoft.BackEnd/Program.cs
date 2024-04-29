@@ -29,9 +29,6 @@ var builder = WebApplication.CreateBuilder(new WebApplicationOptions
 });
 
 
-Log.Logger = new LoggerConfiguration()
-       .WriteTo.File("logs/log-.txt", rollingInterval: RollingInterval.Day, retainedFileCountLimit: 5)
-       .CreateLogger();
 
 builder.Services.AddSerilog();
 

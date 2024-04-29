@@ -19,13 +19,13 @@ namespace Application.Services.Book
             _hostEnvironment = hostEnvironment;
         }
 
-        public async Task<List<BookAuthorViewModel>> GetAuthorListAsync()
+        public async Task<List<BookAuthorDTO>> GetAuthorListAsync()
         {
             try
             {
                 var list = await _authorRepository.GetBookAuthorList();
 
-                return list.Select(dto => new BookAuthorViewModel
+                return list.Select(dto => new BookAuthorDTO
                 {
                     BookAuthorGuid = dto.BookAuthorGuid,
                     Name = $"{dto.Name} {dto.LastName}",

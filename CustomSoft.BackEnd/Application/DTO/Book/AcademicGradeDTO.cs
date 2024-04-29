@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModels.Book
 {
-    public class AcademicGradeViewModel
+    public class AcademicGradeDTO
     {
         public int AcademicGradeId { get; set; }
         public string? Name { get; set; }

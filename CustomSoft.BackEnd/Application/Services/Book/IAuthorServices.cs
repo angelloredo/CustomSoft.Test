@@ -10,7 +10,7 @@ namespace Application.Services.Book
 {
     public interface IAuthorServices
     {
-        Task<List<BookAuthorViewModel>> GetAuthorListAsync();
+        Task<List<ViewModels.Book.BookAuthorDTO>> GetAuthorListAsync();
 
     }
 }

@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace Application.ViewModels.Book
 {
-    public class BookViewModel
+    public class BookDTO
     {
-        public BookViewModel()
+        public BookDTO()
         {
 
         }
