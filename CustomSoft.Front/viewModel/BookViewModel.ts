@@ -21,6 +21,7 @@ export class BookViewModel implements Book {
     AuthorName?: string = '';
     AuthorLastName?: string = '';
     FileName?: string = '';
+
     constructor(
         BookId: string,
         Title: string,
@@ -37,6 +38,10 @@ export class BookViewModel implements Book {
         this.AuthorName = AuthorName;
         this.AuthorLastName = AuthorLastName;
         this.FileName = FileName;
+    }
+
+    static createEmpty(): BookViewModel {
+        return new BookViewModel('','');
     }
 
 

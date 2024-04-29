@@ -34,7 +34,7 @@ export default defineComponent({
     },
     data() {
         return {
-            book: new BookViewModel(),
+            book:  BookViewModel.createEmpty(),
             valid: false,
             enabledAddButton: false,
             file: null,
@@ -65,7 +65,7 @@ export default defineComponent({
                 console.error('Error al cargar el libro:', error);
             }
         } else {
-            this.book = new BookViewModel();
+            this.book = BookViewModel.createEmpty();
         }
         console.log('Formulario válido:', this.valid);
         this.valid = false;
@@ -100,7 +100,7 @@ export default defineComponent({
         },
         resetForm() {
             (this.$refs.form2 as any).reset();
-            this.book = new BookViewModel();
+            this.book = BookViewModel.createEmpty();
             this.valid = false;
             this.enabledAddButton = false;
         },

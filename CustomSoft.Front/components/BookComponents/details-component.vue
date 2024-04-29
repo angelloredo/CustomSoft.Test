@@ -52,7 +52,7 @@ export default defineComponent({
         resetForm() {
             // Reseteamos el formulario
             (this.$refs.form as any).reset();
-            this.book = new BookViewModel();
+            this.book = BookViewModel.createEmpty();
             this.valid = false;
         },
         async fetchBook() {
