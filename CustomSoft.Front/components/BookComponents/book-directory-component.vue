@@ -5,7 +5,7 @@
     <v-treeview :items="treeItems" activatable :open="openNodes" @update:active="onActiveItemChange($event)">
       <template v-slot:prepend="{ item }">
         <v-icon>{{ item.type === 'directory' ? 'mdi-folder' : 'mdi-file' }}</v-icon>
-        <span @click="toggleNode(item)">{{ item.name }}</span>
+        <span>{{ item.name }}</span>
       </template>
       <template v-slot:label="{ item }">
 
@@ -62,23 +62,21 @@ export default defineComponent({
       let id = this.activeItemId[0];
       console.log("id" + id);
       let res = null;
-      for (let item of this.treeItems) {
-
-        if (item.id == id) {
-          return item;
-          break;
-        }
-
-        if (item.children && item.children.length > 0) {
-          for (let itemChild of item.children) {
-
-            if (itemChild.id == id) {
-              res = itemChild;
-              break;
+      const search = (items) => {
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].id === id) {
+            return items[i]; // Elemento encontrado y eliminado
+          }
+          if (items[i].children && items[i].children.length > 0) {
+            if (search(items[i].children) !== null) {
+              return search(items[i].children); // Elemento encontrado y eliminado en los hijos
             }
           }
         }
-      }
+        return null; // Elemento no encontrado en este nivel
+      };
+
+      res = search(this.treeItems);
 
       return res;
     },

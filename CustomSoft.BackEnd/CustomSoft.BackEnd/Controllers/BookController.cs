@@ -113,7 +113,7 @@ namespace CustomSoft.BackEnd.Controllers
 
                 if (apiKey != apiKeySecret)
                 {
-                    _logger.LogError($"No autorizado");
+                    _logger.LogError($"No autorizado.");
                     return Unauthorized();
                 }
 
