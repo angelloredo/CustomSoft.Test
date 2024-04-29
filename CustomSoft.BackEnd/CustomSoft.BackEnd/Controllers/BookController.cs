@@ -1,6 +1,7 @@
 ﻿using Application.Commands.Book;
 using Application.Services.Book;
 using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using MimeKit;
 using Newtonsoft.Json;
@@ -112,6 +113,7 @@ namespace CustomSoft.BackEnd.Controllers
 
                 if (apiKey != apiKeySecret)
                 {
+                    _logger.LogError($"No autorizado");
                     return Unauthorized();
                 }
 

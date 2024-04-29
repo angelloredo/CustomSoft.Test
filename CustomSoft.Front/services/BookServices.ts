@@ -1,8 +1,9 @@
 import axios from 'axios';
-import { Book } from '~/viewModel/BookViewModel';
+import { Book, BookViewModel } from '~/viewModel/BookViewModel';
 import * as XLSX from 'xlsx';
 
 const baseURL = 'http://localhost:33755/api/book';
+const baseURLAuthor = 'http://localhost:33755/api/Author';
 
 interface CreateBookCommand {
     Title: string;
@@ -13,6 +14,8 @@ interface UpdateBookCommand {
     BookId: string;
     Title?: string;
     FileDirection?: string;
+    PublicationDate?: string | null
+
 }
 
 interface IBookService {
@@ -24,6 +27,7 @@ interface IBookService {
     uploadFile(bookId: string, file: File): Promise<any>;
     downloadFile(book: Book): Promise<void>;
     exportToExcel(data: any, fileName: string): void;
+    getAuthorListAsync(): Promise<any>;
 }
 
 class BookService implements IBookService {
@@ -36,11 +40,14 @@ class BookService implements IBookService {
 
 
     private handleError(error: any): void {
-        const toastMessage = "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.";
+        let toastMessage = "Ha ocurrido un error. Por favor, inténtalo de nuevo más tarde.";
 
         if (error.response) {
             // El servidor respondió con un código de estado que no está en el rango 2xx
             console.error('Error de servidor:', error.response.data);
+            if (error.response.data.errors.title) {
+                toastMessage += error.response.data.errors.title.toString();
+            }
             this.context.$toast.error(error.response.data.message || toastMessage); // Muestra mensaje toast de error
         } else if (error.request) {
             // La solicitud fue realizada pero no se recibió respuesta
@@ -63,6 +70,9 @@ class BookService implements IBookService {
 
     async updateBook(bookId: string, updateBookCommand: UpdateBookCommand): Promise<void> {
         try {
+            if (updateBookCommand.PublicationDate === "Sin publicar.") {
+                updateBookCommand.PublicationDate = null;
+            }
             await axios.put<void>(`${baseURL}`, updateBookCommand);
         } catch (error) {
             this.handleError(error);
@@ -89,6 +99,23 @@ class BookService implements IBookService {
     async getBookList(): Promise<any> {
         try {
             const response = await axios.get<any>(baseURL, { headers: { 'X-Api-Key': 'my-secret-api-key' } });
+
+            return response.data.map((x: any) => new BookViewModel(x.BookId,
+                x.Title,
+                x.PublicationDate,
+                x.BookAuthorGuid,
+                x.AuthorName,
+                '',
+                x.FileName,
+            ));
+        } catch (error) {
+            this.handleError(error);
+        }
+    }
+
+    async getAuthorListAsync(): Promise<any> {
+        try {
+            const response = await axios.get<any>(baseURLAuthor, { headers: { 'X-Api-Key': 'my-secret-api-key' } });
             return response.data;
         } catch (error) {
             this.handleError(error);
@@ -123,8 +150,15 @@ class BookService implements IBookService {
         }
     }
 
-    exportToExcel(data: any, fileName: string): void {
-        const worksheet = XLSX.utils.json_to_sheet(data);
+    exportToExcel(data: Book[], fileName: string): void {
+        const mapData = data.map(x => {
+            return {
+                Titulo: x.Title,
+                "Fecha de publicación": x.PublicationDate,
+                Autor: x.AuthorName
+            }
+        });
+        const worksheet = XLSX.utils.json_to_sheet(mapData);
         const workbook = XLSX.utils.book_new();
         XLSX.utils.book_append_sheet(workbook, worksheet, 'Libros');
         XLSX.writeFile(workbook, fileName);

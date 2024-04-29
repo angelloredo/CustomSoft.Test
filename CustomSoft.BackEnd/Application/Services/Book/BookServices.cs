@@ -93,7 +93,7 @@ namespace Application.Services.Book
                     FileName = dto.FileName,
                     AuthorName = dto.AuthorName,
                     AuthorLastName = dto.AuthorLastName,
-                    PublicationDate = dto.PublicationDate != null ? dto.PublicationDate.Value.ToString("yyyy-MM-dd") : "-"
+                    PublicationDate = dto.PublicationDate != null ? dto.PublicationDate.Value.ToString("yyyy-MM-dd") : "Sin publicar."
                 };
             }
             catch (Exception)
@@ -118,7 +118,7 @@ namespace Application.Services.Book
                     AuthorName = dto.AuthorName,
                     AuthorLastName = dto.AuthorLastName,
                     FileName = dto.FileName,
-                    PublicationDate = dto.PublicationDate != null ? dto.PublicationDate.Value.ToString("yyyy-MM-dd") : "-"
+                    PublicationDate = dto.PublicationDate != null ? dto.PublicationDate.Value.ToString("yyyy-MM-dd") : "Sin publicar."
                 }).ToList();
             }
             catch (Exception)
@@ -152,7 +152,7 @@ namespace Application.Services.Book
                 {
                     BookId = bookId,
                     Title = book.Title,
-                    FileName = book.FileName,
+                    FileName = file.FileName,
                     BookAuthorGuid = book.BookAuthorGuid,
                     PublicationDate = book.PublicationDate,
                     FileSize = fileSize.ToString(),

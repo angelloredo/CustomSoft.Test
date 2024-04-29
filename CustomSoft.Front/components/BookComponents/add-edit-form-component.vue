@@ -2,19 +2,23 @@
     <v-form ref="form2" v-model="valid">
         <v-text-field v-model="book.Title" label="Título" required
             :rules="[v => !!v || 'El título es requerido']"></v-text-field>
-        <v-text-field v-model="book.PublicationDate" label="Fecha de Publicación" type="date" required
-            :rules="[v => !!v || 'La fecha de publicación es requerida']">
+
+        <v-select v-model="book.BookAuthorGuid" :items="authors" item-text="name" item-value="id"
+            label="Autor del Libro" required :rules="[v => !!v || 'El autor del libro es requerido']"></v-select>
+
+        <v-text-field v-model="book.PublicationDate" label="Fecha de Publicación" type="date" >
 
         </v-text-field>
-        <v-text-field v-model="book.BookAuthorGuid" label="ID del Autor del Libro" required
-            :rules="[v => !!v || 'El ID del autor es requerido']"></v-text-field>
+        <!-- <v-text-field v-model="book.BookAuthorGuid" label="ID del Autor del Libro" required
+            :rules="[v => !!v || 'El ID del autor es requerido']"></v-text-field> -->
+
 
         <!-- Componente v-file-input -->
         <v-file-input v-if="selectedId" v-model="file" label="Seleccionar archivo"
             accept="application/pdf"></v-file-input>
 
         <v-btn @click="saveBook" :disabled="!valid" color="primary">{{ buttonText }}</v-btn>
-        <v-btn @click="resetForm" color="secondary">Resetear</v-btn>
+        <v-btn @click="resetForm" color="secondary" v-if="!selectedId">Resetear</v-btn>
         <v-btn @click="resetForm; $emit('cancel');" color="warning">Cancelar</v-btn>
     </v-form>
 </template>
@@ -34,7 +38,8 @@ export default defineComponent({
             valid: false,
             enabledAddButton: false,
             file: null,
-            bookService: new BookService(null)
+            bookService: new BookService(null),
+            authors: [] // Agrega esta línea
         };
     },
     computed: {
@@ -44,6 +49,15 @@ export default defineComponent({
     },
     async mounted() {
         this.bookService = new BookService(this);
+        var authors: any = await this.bookService.getAuthorListAsync();
+        this.authors = authors.map((x: any) => {
+            return {
+                id: x.BookAuthorGuid,
+                name: x.Name
+            }
+        })
+        console.log("Autopres", authors)
+
         if (this.selectedId) {
             try {
                 this.book = await this.bookService.getBookById(this.selectedId);
@@ -65,6 +79,7 @@ export default defineComponent({
         async saveBook() {
             try {
                 if (this.selectedId) {
+                    
                     await this.bookService.updateBook(this.selectedId, (this.book as any));
 
                     // Agregar el archivo si se proporciona

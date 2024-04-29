@@ -42,12 +42,23 @@ builder.Services.Configure<FormOptions>(options =>
     options.MemoryBufferThreshold = int.MaxValue;
 });
 
-//var loggerFactory = new LoggerFactory(new[] { new SerilogProvider(Log.Logger) });
 
-//var serviceProvider = new ServiceCollection()
-//    .AddLogging(loggingBuilder => loggingBuilder.AddSerilog(dispose: true))
-//    .AddDbContext<MyDbContext>(options => options.UseNpgsql("Host=myhost;Username=myuser;Password=mypassword;Database=mydatabase"))
-//    .BuildServiceProvider();
+
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Error)
+        .WriteTo.File("errorLogs/log-.txt",
+            rollingInterval: RollingInterval.Day, //Intervalo diario
+            retainedFileCountLimit: 20, //limite de archivos, se reemplaza en ultimo
+            fileSizeLimitBytes: 10485760)) // 10 MB 
+    .WriteTo.Logger(lc => lc
+        .Filter.ByIncludingOnly(e => e.Level == LogEventLevel.Information)
+        .WriteTo.File("infoLogs/log-.txt",
+            rollingInterval: RollingInterval.Day,
+            retainedFileCountLimit: 20,
+            fileSizeLimitBytes: 10485760)) 
+    .CreateLogger();
+
 
 builder.Services.AddCors(options =>
 {
@@ -166,7 +177,7 @@ static class CustomExtensionsMethods
     {
         // Add framework services.
         services.AddControllers();
-  
+
 
         services.AddCors(options =>
         {
@@ -176,7 +187,7 @@ static class CustomExtensionsMethods
                     builder.AllowAnyOrigin()
                            .AllowAnyMethod()
                            .AllowAnyHeader()
-                           .WithExposedHeaders("X-Api-Key"); 
+                           .WithExposedHeaders("X-Api-Key");
                 });
         });
 
@@ -189,9 +200,11 @@ static class CustomExtensionsMethods
 
     public static IServiceCollection AddCustomDbContext(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<BookMarketContext>(options => {
+        services.AddDbContext<BookMarketContext>(options =>
+        {
             options.UseNpgsql(configuration["Data:DefaultConnection:ConnectionString"],
-                npgsqlOptionsAction: sqlOptions => {
+                npgsqlOptionsAction: sqlOptions =>
+                {
                     sqlOptions.MigrationsAssembly(typeof(Program).GetTypeInfo().Assembly.GetName().Name);
                 });
         },
@@ -213,23 +226,10 @@ static class CustomExtensionsMethods
                 Version = "v1",
                 Description = "HTTP API."
             });
-            //options.AddSecurityDefinition("oauth2", new OpenApiSecurityScheme {
-            //  Type = SecuritySchemeType.OAuth2,
-            //  Flows = new OpenApiOAuthFlows() {
-            //    Implicit = new OpenApiOAuthFlow() {
-            //      AuthorizationUrl = new Uri($"{configuration.GetValue<string>("IdentityUrlExternal")}/connect/authorize"),
-            //      TokenUrl = new Uri($"{configuration.GetValue<string>("IdentityUrlExternal")}/connect/token"),
-            //      Scopes = new Dictionary<string, string>()
-            //            {
-            //                      { "eFarms", "eFarms API" }
-            //                  }
-            //    }
-            //  }
-            //});
-            //options.OperationFilter<AuthorizeCheckOperationFilter>();
+
         });
 
-    
+
 
         return services;
     }
@@ -238,7 +238,7 @@ static class CustomExtensionsMethods
     public static IServiceCollection AddCustomIC(this IServiceCollection services, IConfiguration configuration)
     {
 
-      
+
 
         // Agrega la cadena de conexión al contenedor de inyección de dependencias
         services.AddSingleton(configuration["Data:DefaultConnection:ConnectionString"]);
@@ -246,12 +246,14 @@ static class CustomExtensionsMethods
 
         ///// Repositories
         /////
-       services.AddScoped<IBookRepository, BookRepository>();
+        services.AddScoped<IBookRepository, BookRepository>();
+        services.AddScoped<IAuthorRepository, AuthorRepository>();
 
         /////Servces
         /////
 
         services.AddScoped<IBookServices, BookServices>();
+        services.AddScoped<IAuthorServices, AuthorServices>();
 
 
         return services;

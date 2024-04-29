@@ -65,7 +65,7 @@ export default {
           to: '/'
         },
         {
-          icon: 'mdi-menu',
+          icon: 'mdi-folder-outline',
           title: 'Arbol de directorios',
           to: '/inspire'
         }

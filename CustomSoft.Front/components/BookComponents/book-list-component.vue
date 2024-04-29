@@ -133,7 +133,7 @@ export default defineComponent({
         },
         exportToExcel() {
 
-            this.bookService.exportToExcel(this.books, 'libros.xlsx');
+            this.bookService.exportToExcel(this.books as any, 'libros.xlsx');
         }
     },
     async mounted() {

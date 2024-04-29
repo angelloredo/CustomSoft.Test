@@ -8,10 +8,8 @@
 
   <ItemGroup>
     <Folder Include="Commands\ShoppingCart\" />
-    <Folder Include="Queries\Book\" />
-    <Folder Include="Queries\ShoppingCart\" />
     <Folder Include="Services\ShoppingCart\" />
-    <Folder Include="ViewModels\ShoppingCart\" />
+    <Folder Include="DTO\ShoppingCart\" />
   </ItemGroup>
 
   <ItemGroup>

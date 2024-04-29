@@ -8,7 +8,7 @@
         <span @click="toggleNode(item)">{{ item.name }}</span>
       </template>
       <template v-slot:label="{ item }">
-       
+
         <v-icon @click="deleteItem(item)" class="ml-2">mdi-delete</v-icon>
       </template>
     </v-treeview>
@@ -28,7 +28,8 @@
         </v-card-actions>
       </v-card>
     </v-dialog>
-    <v-btn @click="dialog = true" color="primary" v-if="activeItem == null || activeItem.type === 'directory'">Agregar Elemento</v-btn>
+    <v-btn @click="dialog = true" color="primary" v-if="activeItem == null || activeItem.type === 'directory'">Agregar
+      Elemento</v-btn>
   </div>
 </template>
 
@@ -86,11 +87,14 @@ export default defineComponent({
       this.activeItemId = item;
     },
     toggleNode(node) {
-      if (this.openNodes.includes(node.id)) {
-        this.openNodes = this.openNodes.filter(id => id !== node.id);
-      } else {
-        this.openNodes.push(node.id);
+      if (node.type === 'directory') {
+        if (this.openNodes.includes(node.id)) {
+          this.openNodes = this.openNodes.filter(id => id !== node.id);
+        } else {
+          this.openNodes.push(node.id);
+        }
       }
+
     },
     addItem() {
       // Agregar lógica para agregar el nuevo elemento al árbol
@@ -114,10 +118,25 @@ export default defineComponent({
     },
     deleteItem(item) {
       // Eliminar el elemento seleccionado del árbol
-      const index = this.treeItems.indexOf(item);
-      if (index !== -1) {
-        this.treeItems.splice(index, 1);
-      }
+      const itemId = item.id;
+
+      const deleteItemAndChildren = (items) => {
+        for (let i = 0; i < items.length; i++) {
+          if (items[i].id === itemId) {
+            items.splice(i, 1);
+            return true; // Elemento encontrado y eliminado
+          }
+          if (items[i].children && items[i].children.length > 0) {
+            if (deleteItemAndChildren(items[i].children)) {
+              return true; // Elemento encontrado y eliminado en los hijos
+            }
+          }
+        }
+        return false; // Elemento no encontrado en este nivel
+      };
+
+      deleteItemAndChildren(this.treeItems);
+
     },
   },
 });
