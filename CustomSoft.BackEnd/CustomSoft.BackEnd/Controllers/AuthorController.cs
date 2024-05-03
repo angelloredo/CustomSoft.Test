@@ -28,13 +28,13 @@ namespace CustomSoft.BackEnd.Controllers
         {
             try
             {
-                var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
-                var apiKeySecret = _configuration["ApiKey"];
+                //var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
+                //var apiKeySecret = _configuration["ApiKey"];
 
-                if (apiKey != apiKeySecret)
-                {
-                    return Unauthorized();
-                }
+                //if (apiKey != apiKeySecret)
+                //{
+                //    return Unauthorized();
+                //}
 
                 var books = await _authorServices.GetAuthorListAsync();
                 return Ok(JsonConvert.SerializeObject(books));

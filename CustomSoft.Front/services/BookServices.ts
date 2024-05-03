@@ -5,6 +5,11 @@ import * as XLSX from 'xlsx';
 const baseURL = 'http://localhost:33755/api/book';
 const baseURLAuthor = 'http://localhost:33755/api/Author';
 
+const headers = {
+    headers: { 'X-Api-Key': 'my-secret-api-key' }
+};
+
+
 interface CreateBookCommand {
     Title: string;
     FileDirection?: string;
@@ -62,7 +67,7 @@ class BookService implements IBookService {
 
     async insertBook(createBookCommand: CreateBookCommand): Promise<void> {
         try {
-            await axios.post<void>(baseURL, createBookCommand);
+            await axios.post<void>(baseURL, createBookCommand, headers);
         } catch (error) {
             this.handleError(error);
         }
@@ -73,7 +78,7 @@ class BookService implements IBookService {
             if (updateBookCommand.PublicationDate === "Sin publicar.") {
                 updateBookCommand.PublicationDate = null;
             }
-            await axios.put<void>(`${baseURL}`, updateBookCommand);
+            await axios.put<void>(`${baseURL}`, updateBookCommand, headers);
         } catch (error) {
             this.handleError(error);
         }
@@ -81,7 +86,7 @@ class BookService implements IBookService {
 
     async deleteBook(bookId: string): Promise<void> {
         try {
-            await axios.delete<void>(`${baseURL}/${bookId}`);
+            await axios.delete<void>(`${baseURL}/${bookId}`, headers);
         } catch (error) {
             this.handleError(error);
         }
@@ -89,7 +94,7 @@ class BookService implements IBookService {
 
     async getBookById(bookId: string): Promise<any> {
         try {
-            const response = await axios.get<Book>(`${baseURL}/${bookId}`);
+            const response = await axios.get<Book>(`${baseURL}/${bookId}`, headers);
             return response.data;
         } catch (error) {
             this.handleError(error);
@@ -98,7 +103,7 @@ class BookService implements IBookService {
 
     async getBookList(): Promise<any> {
         try {
-            const response = await axios.get<any>(baseURL, { headers: { 'X-Api-Key': 'my-secret-api-key' } });
+            const response = await axios.get<any>(baseURL, headers);
 
             return response.data.map((x: any) => new BookViewModel(x.BookId,
                 x.Title,
@@ -108,7 +113,7 @@ class BookService implements IBookService {
                 '',
                 x.FileName,
             ));
-            
+
         } catch (error) {
             this.handleError(error);
         }
@@ -116,7 +121,7 @@ class BookService implements IBookService {
 
     async getAuthorListAsync(): Promise<any> {
         try {
-            const response = await axios.get<any>(baseURLAuthor, { headers: { 'X-Api-Key': 'my-secret-api-key' } });
+            const response = await axios.get<any>(baseURLAuthor, headers);
             return response.data;
         } catch (error) {
             this.handleError(error);
@@ -127,7 +132,7 @@ class BookService implements IBookService {
         try {
             const formData = new FormData();
             formData.append('file', file);
-            const config = { headers: { 'content-type': 'multipart/form-data' } };
+            const config = { headers: { 'content-type': 'multipart/form-data', 'X-Api-Key': 'my-secret-api-key' } };
             await axios.post(`${baseURL}/upload/${bookId}`, formData, config);
         } catch (error) {
             this.handleError(error);
@@ -136,7 +141,7 @@ class BookService implements IBookService {
 
     async downloadFile(book: Book): Promise<void> {
         try {
-            const response = await fetch(`${baseURL}/download/${book.BookId}`);
+            const response = await fetch(`${baseURL}/download/${book.BookId}`, headers);
             const blob = await response.blob();
             const url = window.URL.createObjectURL(blob);
             const a = document.createElement('a');

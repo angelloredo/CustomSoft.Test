@@ -57,17 +57,6 @@ Log.Logger = new LoggerConfiguration()
     .CreateLogger();
 
 
-builder.Services.AddCors(options =>
-{
-    options.AddPolicy("AllowAll",
-        builder =>
-        {
-            builder.AllowAnyOrigin()
-                   .AllowAnyMethod()
-                   .AllowAnyHeader();
-        });
-});
-
 
 
 
@@ -82,7 +71,6 @@ builder.Services.AddSwaggerGen();
 
 
 builder.Services.AddHttpContextAccessor();
-//builder.Services.AddTransient<ApiKeyMiddleware>();
 
 builder.Services
     .AddCustomMvc()
@@ -99,11 +87,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-
-app.UseAuthorization();
-//app.UseMiddleware<ApiKeyMiddleware>();
-
 app.UseCors("AllowAllOrigins");
+app.UseMiddleware<ApiKeyMiddleware>();
+app.UseAuthorization();
 app.MapControllers();
 
 try
@@ -142,10 +128,10 @@ public class ApiKeyMiddleware
     private readonly RequestDelegate _next;
     private readonly string _apiKey;
 
-    public ApiKeyMiddleware(RequestDelegate next, string apiKey)
+    public ApiKeyMiddleware(RequestDelegate next, IConfiguration configuration)
     {
         _next = next;
-        _apiKey = apiKey;
+        _apiKey = configuration["ApiKey"];
     }
 
     public async Task InvokeAsync(HttpContext context)
@@ -160,6 +146,7 @@ public class ApiKeyMiddleware
             }
         }
 
+        Log.Error($"No autorizado.");
         context.Response.StatusCode = 401;
         await context.Response.WriteAsync("Unauthorized");
     }

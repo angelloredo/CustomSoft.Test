@@ -10,7 +10,7 @@
 <script>
 import BookDirectory from '~/components/BookComponents/book-directory-component.vue' 
 export default {
-  name: 'InspirePage',
+  name: 'DirectoryPage',
   components: {
     BookDirectory
   }

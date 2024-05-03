@@ -108,14 +108,14 @@ namespace CustomSoft.BackEnd.Controllers
         {
             try
             {
-                var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
-                var apiKeySecret = _configuration["ApiKey"];
+                //var apiKey = _httpContextAccessor.HttpContext.Request.Headers["X-Api-Key"].FirstOrDefault();
+                //var apiKeySecret = _configuration["ApiKey"];
 
-                if (apiKey != apiKeySecret)
-                {
-                    _logger.LogError($"No autorizado.");
-                    return Unauthorized();
-                }
+                //if (apiKey != apiKeySecret)
+                //{
+                //    _logger.LogError($"No autorizado.");
+                //    return Unauthorized();
+                //}
 
                 var books = await _bookService.GetBookListAsync();
                 return Ok(JsonConvert.SerializeObject(books));
